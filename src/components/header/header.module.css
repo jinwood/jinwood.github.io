@@ -1,3 +1,9 @@
 .site-title {
   font-weight: bold;
+  width: 300px;
+  pointer-events: all;
+}
+
+.site-title-container {
+  pointer-events: none;
 }

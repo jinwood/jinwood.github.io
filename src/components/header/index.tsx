@@ -17,7 +17,7 @@ const Header = (props: Props) => {
 
   return (
     <Container fluid>
-      <Row className="pt-3">
+      <Row className={headerStyles.siteTitleContainer + " " + "pt-3"}>
         <Col>
           <Link to="/">
             <h1 className={headerStyles.siteTitle}>Julian Inwood</h1>
