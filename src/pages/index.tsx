@@ -4,27 +4,30 @@ import Jumbotron from "react-bootstrap/Jumbotron";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-import Layout from "../components/layout/";
-import SEO from "../components/seo/";
+import Layout from "../components/layout";
+import SEO from "../components/seo";
 
 const IndexPage = () => (
   <Layout>
-    <Jumbotron className="p-5">
-      <Row>
-        <Col>
+    <Row>
+      <Col md={8} sm={12}>
+        <Jumbotron className="p-5">
           <SEO title="Home" />
           <p>Hey</p>
 
           <p>I'm a web developer based in Bristol</p>
-        </Col>
-      </Row>
-
-      <Row>
-        <Link to="/page-2/">Go to page 2</Link>
-        <br />
-        <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-      </Row>
-    </Jumbotron>
+          <p>stuff</p>
+        </Jumbotron>
+      </Col>
+      <Col>
+        <Jumbotron>
+          Socials
+        </Jumbotron>
+        <Jumbotron>
+          Recent Posts
+        </Jumbotron>
+      </Col>
+    </Row>
   </Layout>
 );
 

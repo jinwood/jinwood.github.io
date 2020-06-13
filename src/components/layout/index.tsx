@@ -14,6 +14,7 @@ import Col from "react-bootstrap/Col";
 
 import Header from "../header/";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "../../styles/global.css";
 
 type Props = {
   children: any;
