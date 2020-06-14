@@ -15,10 +15,10 @@ const About = () => {
 
           <p>
             <strong>
-              I'm a programming enthusiast who loves writing good software.
+              A programming enthusiast who loves writing good software.
             </strong>{" "}
-            I'm an experienced web developer who's worked across various stacks,
-            in various industries.
+            I'm experienced in web development and have worked across a variety
+            of stacks, in various industries.
           </p>
         </Col>
       </Row>

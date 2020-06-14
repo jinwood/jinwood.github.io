@@ -49,7 +49,11 @@ const IndexPage = () => {
         <Col>
           <Jumbotron>
             <Col className="d-flex justify-content-around">
-              <a href="https://github.com/jinwood/" target="_blank">
+              <a
+                href="https://github.com/jinwood/"
+                target="_blank"
+                rel="noopener"
+              >
                 <MarkGithubIcon size={24} />
               </a>
               <a href="mailto:jinw@protonmail.com">
