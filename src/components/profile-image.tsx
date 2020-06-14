@@ -29,7 +29,7 @@ const ProfileImage = () => {
 
   return (
     <Img
-      className="rounded"
+      className="rounded mb-2"
       fluid={data.placeholderImage.childImageSharp.fluid}
     />
   );
