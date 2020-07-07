@@ -5,6 +5,15 @@ h4,
 p {
   font-family: Helvetica, "Trebuchet MS", Verdana, sans-serif;
 }
+h1,
+h2,
+h3,
+h4 {
+  color: #1c6e8c;
+}
+p {
+  color: #274156;
+}
 
 Link {
   color: black;
@@ -12,4 +21,7 @@ Link {
 
 h1 {
   color: black;
+}
+.jumbotron {
+  background-color: #fbfcff;
 }

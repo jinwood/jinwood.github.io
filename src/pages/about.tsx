@@ -15,7 +15,7 @@ const About = () => {
 
           <p>
             <strong>
-              A programming enthusiast who loves writing good software.
+              A programming enthusiast who takes pride in writing good software.
             </strong>
             {" "}
             I'm experienced in web development and have worked across a variety
@@ -84,18 +84,17 @@ const About = () => {
           </ul>
         </Col>
       </Row>
-        <Row>
-          <Col md={8}>
-            <p>
-             Currently I am working with react, redux and flow during the day,
-              and TypeScript at home. I'm experienced with C# .NET and spent the
-              first few years of my software career building web apps using this
-              technology. Although currently my preference is with the
-              JavaScript / node ecosystem, I am interested in any and all web
-              technologies.
-              </p>
-            </Col>
-          </Row>
+      <Row>
+        <Col md={8}>
+          <p>
+            Currently I am working with react, redux and flow during the day,
+            and TypeScript at home. I'm experienced with C# .NET and spent the
+            first few years of my software career building web apps using this
+            technology. Although currently my preference is with the JavaScript
+            / node ecosystem, I am interested in any and all web technologies.
+          </p>
+        </Col>
+      </Row>
     </Layout>
   );
 };
