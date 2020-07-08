@@ -13,10 +13,14 @@ const About = () => {
       <Row>
         <Col md={8}>
           <h2>Web developer - Bristol, UK</h2>
-
+          <p>
+            Email: <a href="mailto:jinw@pm.me">jinw@pm.me</a>
+          </p>
+          <p>Location: Bristol, UK</p>
           <p>
             <strong>
-              A programming enthusiast who takes pride in writing good software.
+              A programming enthusiast who takes pride in writing quality
+              software.
             </strong>{" "}
             I'm experienced in web development and have worked across a variety
             of stacks, in various industries. I started my career working in
