@@ -1,3 +1,8 @@
+@media print {
+  .container {
+    max-width: 2000px;
+  }
+}
 h1,
 h2,
 h3,
@@ -12,7 +17,7 @@ h4 {
   color: #1c6e8c;
 }
 p {
-  color: #274156;
+  color: black;
 }
 
 Link {
