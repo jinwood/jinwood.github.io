@@ -1,0 +1,35 @@
+body {
+  background-color: #e5d0cc;
+}
+@media print {
+  .container {
+    max-width: 2000px;
+  }
+}
+h1,
+h2,
+h3,
+h4,
+p {
+  font-family: Helvetica, "Trebuchet MS", Verdana, sans-serif;
+}
+h1,
+h2,
+h3,
+h4 {
+  color: #1c6e8c;
+}
+p {
+  color: #7f7b82;
+}
+
+Link {
+  color: black;
+}
+
+h1 {
+  color: black;
+}
+.jumbotron {
+  background-color: #bfacb5;
+}

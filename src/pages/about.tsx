@@ -78,7 +78,9 @@ const About = () => {
             Flow. My day to day activities include building new features, fixing
             bugs, writing documentation, tests, etc. I am currently spearheading
             a push towards a micro-frontend architecture so this involves some
-            high level design work, task scoping and plenty of planning.
+            high level design work, task scoping and plenty of planning. I also
+            spend some time mentoring juniors, reviewing code, and presenting
+            new features to product stakeholders.
           </p>
         </Col>
       </Row>
