@@ -21,15 +21,20 @@ const Header = (props: Props) => {
         <Col>
           <Link to="/">
             <h1 className={headerStyles.siteTitle}>Julian Inwood</h1>
+            <p
+              className={headerStyles.siteSubtitle}
+            >
+              Software developer (web) - Bristol
+            </p>
           </Link>
         </Col>
       </Row>
       <Row>
         <Col>
-          <Navbar>
+          <Navbar className="">
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
-              <Nav className="mr-auto">
+              <Nav className="ml-auto">
                 <Link className="nav-link" to="/projects">Projects</Link>
                 <Link className="nav-link" to="/about">About</Link>
               </Nav>

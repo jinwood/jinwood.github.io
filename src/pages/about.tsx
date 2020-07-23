@@ -12,7 +12,7 @@ const About = () => {
     <Layout>
       <Row>
         <Col md={8}>
-          <h2>Web developer - Bristol, UK</h2>
+          <h2>Software developer - Bristol, UK</h2>
           <p>
             Email: <a href="mailto:jinw@pm.me">jinw@pm.me</a>
           </p>
@@ -21,7 +21,8 @@ const About = () => {
             <strong>
               A programming enthusiast who takes pride in writing quality
               software.
-            </strong>{" "}
+            </strong>
+            {" "}
             I'm experienced in web development and have worked across a variety
             of stacks, in various industries. I started my career working in
             ASP.NET but have since transitioned into more JavaScript orientated
@@ -33,10 +34,12 @@ const About = () => {
             else. Vim is my text editor of choice for most languages, but when
             I'm using TypeScript I tend to switch between it and VS Code (hard
             to argue with the fantastic language integration). I do everything
-            else from the terminal. If you're interested you can see my dotfiles{" "}
+            else from the terminal. If you're interested you can see my
+            dotfiles{" "}
             <a href="https://github.com/jinwood/dotfiles" target="blank">
               here
-            </a>{" "}
+            </a>
+            {" "}
             (although they are still very much WIP and probably not very good).
           </p>
         </Col>
@@ -127,7 +130,7 @@ const About = () => {
       </Row>
       <Row>
         <Col md={8}>
-          <strong>Software Engineer at REPL Group </strong>
+          <strong>Software Engineer at REPL Group</strong>
           <div>05-2017 - 08-2018</div>
           {/* todo - more */}
           <ul>
@@ -187,7 +190,7 @@ const About = () => {
       </Row>
       <Row>
         <Col md={8}>
-          <strong> Software Developer at BSS Digital </strong>
+          <strong>Software Developer at BSS Digital</strong>
           <div>07-2014 06-2015</div>
           <p>
             Digital agency serving the web needs of various charities across the
@@ -211,7 +214,7 @@ const About = () => {
       </Row>
       <Row>
         <Col md={8}>
-          <strong>Junior Developer at Interface 247 </strong>
+          <strong>Junior Developer at Interface 247</strong>
           <div>04-2012 07-2014</div>
           <p>
             Started my career in software engineering at a vehicle management

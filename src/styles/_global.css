@@ -13,8 +13,7 @@ h4,
 p {
   font-family: Helvetica, "Trebuchet MS", Verdana, sans-serif;
 }
-h1,
-h2,
+h1 h2,
 h3,
 h4 {
   color: #1c6e8c;
@@ -31,5 +30,5 @@ h1 {
   color: black;
 }
 .jumbotron {
-  background-color: #bfacb5;
+  background-color: #e9ecef54;
 }
