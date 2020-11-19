@@ -20,9 +20,7 @@ const IndexPage = () => {
                 <ProfileImage />
               </Col>
               <Col>
-                <h3>
-                  Lifelong nerd, tech enthusiast and self taught web developer.
-                </h3>
+                <h3>Nerd, tech enthusiast and self taught web developer.</h3>
               </Col>
             </Row>
             <p>
