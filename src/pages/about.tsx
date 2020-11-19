@@ -21,25 +21,22 @@ const About = () => {
             <strong>
               A programming enthusiast who takes pride in writing quality
               software.
-            </strong>
-            {" "}
+            </strong>{" "}
             I'm experienced in web development and have worked across a variety
             of stacks, in various industries. I started my career working in
             ASP.NET but have since transitioned into more JavaScript orientated
             positions. With that said, I am interested in any and all tech
-            stacks (but I'd prefer to stay away from Windows 😀).
+            stacks but with a focus on JavaScript.
           </p>
           <p>
             I use a Macbook for my day job and a Linux desktop for everything
             else. Vim is my text editor of choice for most languages, but when
             I'm using TypeScript I tend to switch between it and VS Code (hard
             to argue with the fantastic language integration). I do everything
-            else from the terminal. If you're interested you can see my
-            dotfiles{" "}
+            else from the terminal. If you're interested you can see my dotfiles{" "}
             <a href="https://github.com/jinwood/dotfiles" target="blank">
               here
-            </a>
-            {" "}
+            </a>{" "}
             (although they are still very much WIP and probably not very good).
           </p>
         </Col>
