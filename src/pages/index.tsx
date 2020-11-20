@@ -13,7 +13,7 @@ const IndexPage = () => {
     <Layout>
       <Row>
         <Col md={8} sm={12}>
-          <Jumbotron className="p-5">
+          <Jumbotron className="p-3">
             <SEO title="Home" />
             <Row>
               <Col md={4}>
@@ -59,7 +59,9 @@ const IndexPage = () => {
               </a>
             </Col>
           </Jumbotron>
-          <Jumbotron>Recent Posts</Jumbotron>
+          <Jumbotron className="d-flex justify-content-around">
+            Recent Posts
+          </Jumbotron>
         </Col>
       </Row>
     </Layout>

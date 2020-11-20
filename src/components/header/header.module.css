@@ -2,6 +2,7 @@
   font-weight: bold;
   width: 300px;
   pointer-events: all;
+  color: #22333b;
 }
 
 .site-title-container {
@@ -10,5 +11,5 @@
 
 .site-subtitle {
   margin-left: 15px;
-  color: #7f7b82;
+  color: #22333b;
 }

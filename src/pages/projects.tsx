@@ -3,9 +3,11 @@ import { useStaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-
-import Layout from "../components/layout";
 import { Carousel, CarouselItem } from "react-bootstrap";
+import { ArrowRight } from "react-bootstrap-icons";
+import Layout from "../components/layout";
+import CustomCarousel from "../components/project-carousel";
+import ProjectCarousel from "../components/project-carousel";
 
 const Projects = () => {
   const data = useStaticQuery(
@@ -38,6 +40,7 @@ const Projects = () => {
     `
   );
   const { allFile, jinwoodImage } = data;
+
   return (
     <Layout>
       <Row>
@@ -82,13 +85,19 @@ const Projects = () => {
       </Row>
       <Row>
         <Col md={6}>
-          <Carousel interval={7000}>
+          <ProjectCarousel data={allFile.edges} />
+
+          {/* <Carousel
+            interval={7000}
+            nextIcon={<ArrowRight />}
+            prevIcon={<ArrowRight />}
+          >
             {allFile.edges.map((pic: any) => (
               <Carousel.Item key={pic.node.id}>
                 <Img fluid={pic.node.childImageSharp.fluid} />
               </Carousel.Item>
             ))}
-          </Carousel>
+          </Carousel> */}
         </Col>
 
         <Col>

@@ -1,5 +1,5 @@
 body {
-  background-color: #dbdbcd;
+  background-color: #ced0ce;
 }
 @media print {
   .container {
@@ -8,14 +8,16 @@ body {
 }
 p {
   font-family: Helvetica, "Trebuchet MS", Verdana, sans-serif;
+  color: #0a0908;
 }
 h1 h2,
 h3,
-h4 {
-  color: #1c6e8c;
+h4,
+a {
+  color: #22333b;
 }
 p {
-  color: #7f7b82;
+  color: #3f403f;
 }
 
 Link {
@@ -26,10 +28,19 @@ h1 {
   color: black;
 }
 .jumbotron {
-  background-color: #dbdbcd;
+  background-color: #e6e8e6;
 }
 
 .footer-container {
   position: fixed;
+  bottom: 0;
+}
+
+.carousel-indicators {
+  background-color: #5d5e5d;
+  z-index: 1;
+  position: static; /*or relative*/
+  border-radius: 5px;
+
   bottom: 0;
 }

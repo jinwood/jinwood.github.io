@@ -5,7 +5,7 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react";
+import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 import { useStaticQuery, graphql } from "gatsby";
 import Container from "react-bootstrap/Container";
@@ -32,6 +32,14 @@ const Layout = (props: Props) => {
     }
   `);
 
+  const play = () => {
+    const audio = document.getElementsByClassName(
+      "audio-element"
+    )[0] as HTMLAudioElement;
+    console.log("yo");
+    audio.play();
+  };
+
   return (
     <>
       <Container>
@@ -42,10 +50,17 @@ const Layout = (props: Props) => {
         <Container className="">
           <Row>
             <Col></Col>
-            <Col>🦆</Col>
+            <Col onClick={play} className="d-flex justify-content-center">
+              🦆
+            </Col>
             <Col></Col>
           </Row>
         </Container>
+        <div>
+          <audio className="audio-element">
+            <source src="https://quicksounds.com/uploads/tracks/1145428463_122281271_796721762.mp3" />
+          </audio>
+        </div>
       </footer>
     </>
   );
