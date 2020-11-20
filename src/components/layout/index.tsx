@@ -13,6 +13,8 @@ import Container from "react-bootstrap/Container";
 import Header from "../header/";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../../styles/global.css";
+import "../../styles/custom.css";
+import { Col, Row } from "react-bootstrap";
 
 type Props = {
   children: any;
@@ -31,12 +33,21 @@ const Layout = (props: Props) => {
   `);
 
   return (
-    <Container>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div className="p-3 container">
-        {children}
-      </div>
-    </Container>
+    <>
+      <Container>
+        <Header siteTitle={data.site.siteMetadata.title} />
+        <div className="p-3 container">{children}</div>
+      </Container>
+      <footer>
+        <Container className="">
+          <Row>
+            <Col></Col>
+            <Col>🦆</Col>
+            <Col></Col>
+          </Row>
+        </Container>
+      </footer>
+    </>
   );
 };
 

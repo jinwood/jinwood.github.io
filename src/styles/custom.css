@@ -1,15 +1,11 @@
 body {
-  background-color: #e5d0cc;
+  background-color: #dbdbcd;
 }
 @media print {
   .container {
     max-width: 2000px;
   }
 }
-h1,
-h2,
-h3,
-h4,
 p {
   font-family: Helvetica, "Trebuchet MS", Verdana, sans-serif;
 }
@@ -30,5 +26,10 @@ h1 {
   color: black;
 }
 .jumbotron {
-  background-color: #e9ecef54;
+  background-color: #dbdbcd;
+}
+
+.footer-container {
+  position: fixed;
+  bottom: 0;
 }
