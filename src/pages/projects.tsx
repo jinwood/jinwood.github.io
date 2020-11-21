@@ -86,18 +86,6 @@ const Projects = () => {
       <Row>
         <Col md={6}>
           <ProjectCarousel data={allFile.edges} />
-
-          {/* <Carousel
-            interval={7000}
-            nextIcon={<ArrowRight />}
-            prevIcon={<ArrowRight />}
-          >
-            {allFile.edges.map((pic: any) => (
-              <Carousel.Item key={pic.node.id}>
-                <Img fluid={pic.node.childImageSharp.fluid} />
-              </Carousel.Item>
-            ))}
-          </Carousel> */}
         </Col>
 
         <Col>
@@ -110,7 +98,19 @@ const Projects = () => {
           <p>
             The caseworking / crm system were both built using React and flux
             (this is going back a while!). Everything ran off a .NET core
-            backend using a microservices architecture.
+            backend using a microservices architecture. We had seperate services
+            for each unit of the business, including users, properties, comms,
+            marketing, etc.
+          </p>
+          <p>
+            The goal of the project was to build a completely integrated system,
+            including a customer faceing website. A user could enter letme's
+            onboarding journey, and an agent could view their history using our
+            CRM. All communications through text, email (including automated
+            marketing), phone calls etc would appear on their customer profile.
+            Whilst we were successful in producing this system, it presented
+            some interesting challenges, such as tracing erros / issues across
+            multiple services, performance etc.
           </p>
         </Col>
       </Row>
