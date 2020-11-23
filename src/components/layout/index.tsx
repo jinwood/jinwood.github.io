@@ -37,7 +37,7 @@ const Layout = (props: Props) => {
       "audio-element"
     )[0] as HTMLAudioElement;
     console.log("yo");
-    audio.play();
+    //audio.play();
   };
 
   return (
