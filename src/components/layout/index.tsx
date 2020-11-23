@@ -38,17 +38,6 @@ const Layout = (props: Props) => {
         <Header siteTitle={data.site.siteMetadata.title} />
         <div className="p-3 container">{children}</div>
       </Container>
-      <footer>
-        <Container className="">
-          <Row>
-            <Col></Col>
-            <Col>
-              <a href="mailto:jinw@protonmail.com">Say hello</a>
-            </Col>
-            <Col></Col>
-          </Row>
-        </Container>
-      </footer>
     </>
   );
 };
