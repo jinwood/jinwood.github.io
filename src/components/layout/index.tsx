@@ -32,14 +32,6 @@ const Layout = (props: Props) => {
     }
   `);
 
-  const play = () => {
-    const audio = document.getElementsByClassName(
-      "audio-element"
-    )[0] as HTMLAudioElement;
-    console.log("yo");
-    //audio.play();
-  };
-
   return (
     <>
       <Container>
@@ -50,17 +42,12 @@ const Layout = (props: Props) => {
         <Container className="">
           <Row>
             <Col></Col>
-            <Col onClick={play} className="d-flex justify-content-center">
-              🦆
+            <Col>
+              <a href="mailto:jinw@protonmail.com">Say hello</a>
             </Col>
             <Col></Col>
           </Row>
         </Container>
-        <div>
-          <audio className="audio-element">
-            <source src="https://quicksounds.com/uploads/tracks/1145428463_122281271_796721762.mp3" />
-          </audio>
-        </div>
       </footer>
     </>
   );
