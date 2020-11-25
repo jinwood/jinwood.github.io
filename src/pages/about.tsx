@@ -145,7 +145,7 @@ const About = () => {
               Queues.
             </li>
             <li>
-              Extend a legacy telent service by implementing a proxy Web App,
+              Extend a legacy telnet service by implementing a proxy Web App,
               used by Waitrose distribution centers.
             </li>
           </ul>
