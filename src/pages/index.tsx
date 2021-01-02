@@ -3,12 +3,32 @@ import Jumbotron from "react-bootstrap/Jumbotron";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { MarkGithubIcon, MailIcon } from "@primer/octicons-react";
+import { graphql } from "gatsby";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import ProfileImage from "../components/profile-image";
+import PostLink from "../components/post-link";
 
-const IndexPage = () => {
+interface IProps {
+  data: any;
+  allMarkdownRemark: { edges: any };
+}
+
+const IndexPage = ({
+  data: {
+    site,
+    allMarkdownRemark: { edges },
+  },
+}: IProps) => {
+  // console.log(edges);
+
+  let Posts = [];
+  if (edges) {
+    Posts = edges
+      .filter((edge: any) => !!edge.node.frontmatter.date)
+      .map((edge: any) => <PostLink key={edge.node.id} post={edge.node} />);
+  }
   return (
     <Layout>
       <Row>
@@ -61,6 +81,7 @@ const IndexPage = () => {
           </Jumbotron>
           <Jumbotron className="d-flex justify-content-around">
             Recent Posts
+            {Posts}
           </Jumbotron>
         </Col>
       </Row>
@@ -69,3 +90,27 @@ const IndexPage = () => {
 };
 
 export default IndexPage;
+export const pageQuery = graphql`
+  query indexPageQuery {
+    site {
+      siteMetadata {
+        title
+        description
+      }
+    }
+    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+      edges {
+        node {
+          id
+          excerpt(pruneLength: 250)
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            path
+            title
+            thumbnail
+          }
+        }
+      }
+    }
+  }
+`;
