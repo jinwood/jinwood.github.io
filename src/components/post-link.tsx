@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "gatsby";
 
 const PostLink = ({ post }: any) => (
-  <article className="card ">
+  <div className="card ">
     <Link to={post.frontmatter.path}>
       {!!post.frontmatter.thumbnail && (
         <img
@@ -19,6 +19,6 @@ const PostLink = ({ post }: any) => (
       </h2>
       <div className="post-meta">{post.frontmatter.date}</div>
     </header>
-  </article>
+  </div>
 );
 export default PostLink;
