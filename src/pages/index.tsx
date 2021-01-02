@@ -81,7 +81,7 @@ const IndexPage = ({
           </Jumbotron>
           <Jumbotron className="d-flex justify-content-around">
             Recent Posts
-            {Posts}
+            {/* {Posts} */}
           </Jumbotron>
         </Col>
       </Row>
