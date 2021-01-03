@@ -31,6 +31,13 @@ h1 {
   background-color: #e6e8e6;
 }
 
+.container .content {
+  background-color: #e6e8e6;
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
+  border-radius: 0.3rem;
+}
+
 .footer-container {
   position: fixed;
   bottom: 0;

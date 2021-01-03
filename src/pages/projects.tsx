@@ -43,77 +43,80 @@ const Projects = () => {
 
   return (
     <Layout>
-      <Row>
-        <Col md={8}>
-          <h3>jinwood.github.io</h3>
-          <p>
-            I built this site during 2020 when I decided I wanted to retire my
-            old express blog, which was built many moons ago and became somewhat
-            neglected. This is still a work in progress, and I intend to add a
-            blog and some other bits and pieces I've been working on to the
-            projects page.
-          </p>
-          <p>
-            It's built using gatsby.js - a fantastic tool for creating static
-            sites with react. Has some really great features, like serving
-            filesystem assets using graphql, PWA support out the box, etc. It
-            took me a couple of evenings to get the bulk of it set up, and now
-            I'm just tweaking, refining and adding features. Overall it's been a
-            very pleasant experience.
-          </p>
-          <p>
-            Take a look at the source{" "}
-            <a
-              href="https://github.com/jinwood/jinwood.github.io/tree/develop"
-              target="blank"
-            >
-              here.
-            </a>
-          </p>
-        </Col>
-        <Col>
-          <Img
-            className="rounded mb-3"
-            fluid={jinwoodImage.childImageSharp.fluid}
-          />
-        </Col>
-      </Row>
-      <Row>
-        <Col>
-          <h3>Letme CMS & Caseworking</h3>
-        </Col>
-      </Row>
-      <Row>
-        <Col md={6}>
-          <ProjectCarousel data={allFile.edges} />
-        </Col>
+      <div className="container content">
+        <Row>
+          <Col md={8}>
+            <h3>jinwood.github.io</h3>
+            <p>
+              I built this site during 2020 when I decided I wanted to retire my
+              old express blog, which was built many moons ago and became
+              somewhat neglected. This is still a work in progress, and I intend
+              to add a blog and some other bits and pieces I've been working on
+              to the projects page.
+            </p>
+            <p>
+              It's built using gatsby.js - a fantastic tool for creating static
+              sites with react. Has some really great features, like serving
+              filesystem assets using graphql, PWA support out the box, etc. It
+              took me a couple of evenings to get the bulk of it set up, and now
+              I'm just tweaking, refining and adding features. Overall it's been
+              a very pleasant experience.
+            </p>
+            <p>
+              Take a look at the source{" "}
+              <a
+                href="https://github.com/jinwood/jinwood.github.io/tree/develop"
+                target="blank"
+              >
+                here.
+              </a>
+            </p>
+          </Col>
+          <Col>
+            <Img
+              className="rounded mb-3"
+              fluid={jinwoodImage.childImageSharp.fluid}
+            />
+          </Col>
+        </Row>
+        <Row>
+          <Col md={6}></Col>
+          <Col md={6}>
+            <h3>Letme CMS & Caseworking</h3>
+          </Col>
+        </Row>
+        <Row>
+          <Col md={6}>
+            <ProjectCarousel data={allFile.edges} />
+          </Col>
 
-        <Col>
-          <p>
-            Letme was an exciting startup in the property rental space. I was
-            the first developer on a team of three tasked with building out an
-            ecommerce website, caseworking, crm, marketing and callcenter
-            system.
-          </p>
-          <p>
-            The caseworking / crm system were both built using React and flux
-            (this is going back a while!). Everything ran off a .NET core
-            backend using a microservices architecture. We had seperate services
-            for each unit of the business, including users, properties, comms,
-            marketing, etc.
-          </p>
-          <p>
-            The goal of the project was to build a completely integrated system,
-            including a customer faceing website. A user could enter letme's
-            onboarding journey, and an agent could view their history using our
-            CRM. All communications through text, email (including automated
-            marketing), phone calls etc would appear on their customer profile.
-            Whilst we were successful in producing this system, it presented
-            some interesting challenges, such as tracing erros / issues across
-            multiple services, performance etc.
-          </p>
-        </Col>
-      </Row>
+          <Col>
+            <p>
+              Letme was an exciting startup in the property rental space. I was
+              the first developer on a team of three tasked with building out an
+              ecommerce website, caseworking, crm, marketing and callcenter
+              system.
+            </p>
+            <p>
+              The caseworking / crm system were both built using React and flux
+              (this is going back a while!). Everything ran off a .NET core
+              backend using a microservices architecture. We had seperate
+              services for each unit of the business, including users,
+              properties, comms, marketing, etc.
+            </p>
+            <p>
+              The goal of the project was to build a completely integrated
+              system, including a customer faceing website. A user could enter
+              letme's onboarding journey, and an agent could view their history
+              using our CRM. All communications through text, email (including
+              automated marketing), phone calls etc would appear on their
+              customer profile. Whilst we were successful in producing this
+              system, it presented some interesting challenges, such as tracing
+              erros / issues across multiple services, performance etc.
+            </p>
+          </Col>
+        </Row>
+      </div>
     </Layout>
   );
 };

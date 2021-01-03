@@ -1,3 +1,5 @@
+const isProd = process.env.NODE_ENV === "production";
+
 module.exports = {
   siteMetadata: {
     title: `jinwood.github.io`,
@@ -10,6 +12,7 @@ module.exports = {
       options: {
         name: `markdown-pages`,
         path: `${__dirname}/_data`,
+        ignore: isProd ? ["**/_*.md"] : [],
       },
     },
     {
