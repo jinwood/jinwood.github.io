@@ -46,9 +46,3 @@ h1 {
 }
 
 /* blog */
-.card {
-  display: flex;
-  border-radius: "9px";
-  overflow: hidden;
-  line-height: "1.5";
-}

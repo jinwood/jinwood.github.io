@@ -79,9 +79,15 @@ const IndexPage = ({
               </a>
             </Col>
           </Jumbotron>
-          <Jumbotron className="d-flex justify-content-around">
-            Recent Posts
-            {/* {Posts} */}
+          <Jumbotron>
+            <div className="row">
+              <div className="col">
+                <p>Recent Posts</p>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col">{Posts}</div>
+            </div>
           </Jumbotron>
         </Col>
       </Row>
