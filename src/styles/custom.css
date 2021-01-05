@@ -1,5 +1,5 @@
 body {
-  background-color: #ced0ce;
+  background-color: white;
 }
 @media print {
   .container {
@@ -28,11 +28,11 @@ h1 {
   color: black;
 }
 .jumbotron {
-  background-color: #e6e8e6;
+  background-color: white;
 }
 
 .container .content {
-  background-color: #e6e8e6;
+  background-color: white;
   padding: 2rem 1rem;
   margin-bottom: 2rem;
   border-radius: 0.3rem;
