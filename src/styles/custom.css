@@ -43,6 +43,10 @@ h1 {
   bottom: 0;
 }
 
+.home-heading {
+  padding-top: 20px;
+}
+
 .carousel-indicators {
   background-color: #5d5e5d;
   z-index: 1;

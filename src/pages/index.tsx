@@ -39,9 +39,11 @@ const IndexPage = ({
               <Col md={4}>
                 <ProfileImage />
               </Col>
-              <Col>
-                <h3>Nerd, tech enthusiast and self taught web developer.</h3>
-              </Col>
+              <div className="col align-self-center">
+                <Row className="">
+                  <h3>Nerd, tech enthusiast and self taught web developer.</h3>
+                </Row>
+              </div>
             </Row>
             <p>
               I've been working in web development since 2013, where I began my
