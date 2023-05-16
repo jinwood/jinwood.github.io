@@ -16,9 +16,7 @@ Currently I am working with react, redux and AWS during the day, and Deno / Fres
 
 # Employment
 
-## Cuckoo Internet
-
-### Full Stack Developer
+### Cuckoo Internet - Full Stack Developer
 
 ###### 04-2022 - Present
 
@@ -34,9 +32,7 @@ My day to day activities include....
 - Work with our product team to understand customer pain points and design solutions to improve accessibility, usability and site performance.
 - Collaborating via demos, code reviews and architecture discussions
 
-## Quadrotech
-
-### Frontend Developer
+### Quadrotech - Frontend Developer
 
 ###### 08-2019 - 04-2022
 
@@ -49,9 +45,7 @@ Building Nova and On Demand. Both are Office 365 management and reporting platfo
 - Liase with other teams to provide insight in what functionality UI might require from services etc
 - Shadow / mentor junior team members
 
-## Just Eat
-
-### Frontend Developer
+### Just Eat - Frontend Developer
 
 ###### 08-2018 - 08-2019
 
@@ -64,7 +58,7 @@ As a member of the web foundations team, I was responsible for running the Just 
 - Managing releases, including reviewing, merging, and deploying code.
 - Providing on-call support, monitoring, escalation, and issue resolution.
 
-## REPL Group
+### REPL Group
 
 ### Software Engineer
 
@@ -77,9 +71,7 @@ I became a member of the REPL team to contribute to the development of their wor
 - Building a new task management app from scratch using the latest cloud technologies, including Azure Functions, Web Apps, Service Fabric, and Storage Queues..
 - Extending a legacy telnet service by implementing a proxy Web App, which was used by Waitrose distribution centers.
 
-## The Richmond Group
-
-### Software Engineer
+### The Richmond Group - Software Engineer
 
 ###### 06-2015 - 04-2017
 
@@ -91,9 +83,7 @@ Projects included:
 - Building a marketing application that managed customer communications throughout the signup process, integrating with customer.io and Twilio. The application was designed to handle all automated marketing and follow-up needs, scaling with a rapidly growing customer base. It generated email and SMS messages on the fly as customers moved through the application process.
 - Developing a CMS/Caseworking web application for managing customers and their journey throughout the product. This application was built using React and Flux and was integrated with existing microservices, including marketing and call center services.
 
-## BSS Digital
-
-### Software Developer
+### BSS Digital - Software Developer
 
 ###### 07-2014 - 06-2015
 
@@ -104,9 +94,7 @@ I worked for a digital agency that served the web needs of several charities thr
 - Build email templates for marketing purposes.
 - Provide general web support for various customers.
 
-## Interface 247
-
-### Junior Developer
+### Interface 247 - Junior Developer
 
 ###### 04-2012 - 07-2014
 
