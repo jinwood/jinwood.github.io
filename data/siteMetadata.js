@@ -2,9 +2,9 @@ const siteMetadata = {
   title: 'jinwood.github.io',
   author: 'Julian Inwood',
   headerTitle: 'jinwood.github.io',
-  description: '',
+  description: 'My personal site',
   language: 'en-gb',
-  theme: 'system', // system, dark or light
+  theme: 'system',
   siteUrl: 'https://jinwood.github.io',
   siteRepo: 'https://github.com/jinwood/jinwood.github.io',
   siteLogo: '/static/images/logo.png',
