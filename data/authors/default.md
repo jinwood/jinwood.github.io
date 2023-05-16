@@ -32,7 +32,7 @@ My day to day activities include....
 - Work with our product team to understand customer pain points and design solutions to improve accessibility, usability and site performance.
 - Collaborating via demos, code reviews and architecture discussions
 
-### Quadrotech - Frontend Developer
+### Quadrotech / Quest - Frontend Developer
 
 ###### 08-2019 - 04-2022
 
