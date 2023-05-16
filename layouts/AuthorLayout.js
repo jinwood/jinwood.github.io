@@ -10,7 +10,7 @@ export default function AuthorLayout({ children, frontMatter }) {
       <PageSEO title={`About - ${name}`} description={`About me - ${name}`} />
       <div>
         <div className="hidden print:block">
-          <h1 className="mb-4 text-2xl font-bold">Julian Inwood</h1>
+          <h1 className="mb-4 text-4xl font-bold">Julian Inwood</h1>
           <div className="grid grid-cols-2 gap-4">
             <div>
               <p className="font-bold">Job Title:</p>
