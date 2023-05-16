@@ -58,9 +58,7 @@ As a member of the web foundations team, I was responsible for running the Just 
 - Managing releases, including reviewing, merging, and deploying code.
 - Providing on-call support, monitoring, escalation, and issue resolution.
 
-### REPL Group
-
-### Software Engineer
+### REPL Group - Software Engineer
 
 ###### 05-2017 - 08-2018
 
