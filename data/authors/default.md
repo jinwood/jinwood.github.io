@@ -8,7 +8,7 @@ linkedin: https://www.linkedin.com/in/julianinwood
 github: https://github.com/jinwood
 ---
 
-I'm a UK-based full-stack developer currently working at Cuckoo Internet as part of the platform team. We're building state-of-the-art serverless microservices, and I'm excited to be part of this cutting-edge work.
+I'm a UK-based full-stack developer currently working at Cuckoo Internet as part of the platform team. We're building state-of-the-art serverless microservices and fast, attractive and user-friendly web interfaces.
 
 My passion for building great software drives me to constantly learn and grow. Over the past decade or so, I've worked with a variety of stacks and technologies. However, I've found my place with JavaScript and the node ecosystem. That said, I'm always interested in exploring new stacks and technologies.
 
