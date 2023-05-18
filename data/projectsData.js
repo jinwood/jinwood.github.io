@@ -1,11 +1,10 @@
 const projectsData = [
   {
-    title: 'A Search Engine',
-    description: `What if you could look up any information in the world? Webpages, images, videos
-    and more. Google has many features to help you find exactly what you're looking
-    for.`,
-    imgSrc: '/static/images/google.png',
-    href: 'https://www.google.com',
+    title: 'Cuckoo Blog',
+    description: `My first major project at Cuckoo internet was implementing a complete redesign of the'
+    company blog. This involved working with the marketing & design teams to bring their vision to life.`,
+    imgSrc: '/static/images/cuckoo-blog-home.png',
+    href: 'https://www.cuckoo.co/blog',
   },
   {
     title: 'The Time Machine',
