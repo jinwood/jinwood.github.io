@@ -3,6 +3,7 @@ title: Integration Tests, Serverless Architecture, and Flakiness: A Tale of Trou
 summary: A tale of integration test woes
 tags: [testing, serverless, aws]
 date: '2023-07-07'
+draft: true
 ---
 
 We use integration tests heavily at work. They're a great way to confirm that functional pieces
@@ -89,4 +90,14 @@ An added benefit is that the Lambdas will only process messages as they arrive i
 
 ### Use `middy` correctly
 
-When used appropriately, `middy` middleware can drastically improve the reliability and maintainability of serverless functions. Understanding how middy handles promises and errors is crucial to avoiding unexpected behavior, especially when processing batches of messages with the sqs-partial-batch-failure middleware. I had misconceived that `middy` would handle thrown errors and automatically retry messages, however, the reality is that middy requires all promises to resolve before it considers the batch complete. Failing to adhere to this requirement, as I discovered, can lead to repeated retries even if the test assertion had
+When used appropriately, `middy` middleware can drastically improve the reliability and maintainability of serverless functions. Understanding how middy handles promises and errors is crucial to avoiding unexpected behavior, especially when processing batches of messages with the sqs-partial-batch-failure middleware. I had misconceived that `middy` would handle thrown errors and automatically retry messages, however, the reality is that middy requires all promises to resolve before it considers the batch complete. Failing to adhere to this requirement, as I discovered, can lead to repeated retries even if the test assertion had already passed, resulting in very confusing application logs. Once I understood this, I made necessary adjustments to ensure all promises were correctly handled and resolved, improving the reliability of the entire system.
+
+### Await all promises
+
+Awaiting all promises ensures that JavaScript waits until the promise settles and returns its result. This allows the program to handle the promise's result before moving on, thereby avoiding potential issues like those I experienced where the test completed before the promise had resolved. By ensuring all promises are awaited, we can eliminate a common source of bugs in asynchronous JavaScript code.
+
+## Conclusion
+
+Overall, these issues were a good reminder that assumptions can often lead to issues down the line. The process of resolving them has also led to several improvements to our serverless architecture and testing methodology, both of which will benefit future development efforts.
+
+As developers, we should always remember to question our assumptions, test our code thoroughly, and not be afraid to dive deep when issues arise. As I discovered, the solution can often lead to learning new things and making improvements that benefit not just the current project but future ones as well.
