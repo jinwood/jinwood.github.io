@@ -1,6 +1,6 @@
 ---
-title: Integration Tests, Serverless Architecture, and Flakiness: A Tale of Troubleshooting
-summary: A tale of integration test woes
+title: Flaky integration test fun
+summary: A tale of testing woes
 tags: [testing, serverless, aws]
 date: '2023-07-07'
 draft: true
