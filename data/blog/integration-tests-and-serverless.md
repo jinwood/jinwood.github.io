@@ -3,6 +3,7 @@ title: On integration tests, serverless and flakiness
 summary: A tale of integration test woes
 tags: [testing, serverless, aws]
 date: '2023-07-07'
+draft: true
 ---
 
 We use integration tests heavily at work. They're a great way to confirm that functional pieces
@@ -54,3 +55,13 @@ The feature writes n number of values to the previously mentioned map. The test 
 of this map was correctly updated. However it wasn't asserting that the other values were correct. So when you consider
 our race condition issue, the test was passing because some of the time, one value would be correct as it was written
 first, but the others would be old values.
+
+Simply asserting both values would have made the test fail 100% of the time and made diagnosing the issue much easier.
+
+### Issue 3: `middy` was not being used correctly
+
+We use [middy](https://github.com/middyjs/middy) to provide middleware for our lambdas. In this particular use case,
+we use the `sqs-partial-batch-failure` middleware to handle when a message from a batch fails to be processed.
+I added the middleware as an afterthought and didn't really consider how it worked. I assumed that it would
+handle thrown errors and retry the message. However, in the code I was not considering how promises were resolving.
+For example, given 10 messages in a batch, middy requires that all 10 messages resolve before it will consider the
