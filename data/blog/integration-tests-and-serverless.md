@@ -3,7 +3,6 @@ title: Flaky integration test fun
 summary: A tale of testing woes
 tags: [testing, serverless, aws]
 date: '2023-07-07'
-draft: true
 ---
 
 We use integration tests heavily at work. They're a great way to confirm that functional pieces
