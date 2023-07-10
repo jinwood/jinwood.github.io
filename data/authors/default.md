@@ -32,7 +32,7 @@ My experience includes developing contracts microservices utilizing AWS Lambda, 
 My day to day activities include....
 
 - Creating new microservices to extend / improve our existing platform
-- Building new features for both our customer facing website, and our
+- Building new features for both our customer facing website, and internal CRM / tools
 - Creating UI components using our design system, yolk.
 - Work with our product team to understand customer pain points and design solutions to improve accessibility, usability and site performance.
 - Collaborating via demos, code reviews and architecture discussions
