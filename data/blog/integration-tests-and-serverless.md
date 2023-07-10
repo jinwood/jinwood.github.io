@@ -5,7 +5,7 @@ tags: [testing, serverless, aws]
 date: '2023-07-07'
 ---
 
-We use integration tests heavily at work. They're a great way to confirm that functional pieces
+We use integration tests heavily at Cuckoo. They're a great way to confirm that functional pieces
 of our systems work together as expected. I have been working on a microservice for a few months
 and have gradually built up a suite of tests to ensure that the various internal components work
 together as expected.
@@ -77,7 +77,8 @@ Relatively simple one. I was not awaiting a promise, so the test was completing 
 In DynamoDB, a consistent read returns a result that reflects all writes that received a successful response prior to the read. Essentially, it's a read operation that returns the most recent data. If a request doesn't specify a read consistency model, DynamoDB defaults to eventually consistent reads, which doesn't guarantee that the data returned is the most recent but it is faster.
 In this particular case, it made the most sense to use consistent reads as I wanted to ensure that the data being read was the most recent.
 
-### Use `Promise.allSettled` instead of `Promise.all`
+### Use `Promise.allSettled` instead of `Promise.all`
+
 Promise.all and Promise.allSettled are both methods for handling multiple promises in JavaScript, but they handle the resolution and rejection of those promises differently. Promise.all takes an array of promises and returns a new promise that only resolves when all the promises in the array have resolved. If any of the promises are rejected, Promise.all immediately rejects with the reason of the first promise that was rejected. This can be an issue if you need to handle multiple asynchronous operations (like in this case) and need a result from each, regardless of whether they resolve or reject.
 
 On the other hand, Promise.allSettled also takes an array of promises, but it always resolves after all the promises have settled, whether they were resolved or rejected. This allows you to handle each promise's result individually. When Promise.allSettled is resolved, it gives you an array of objects where each object describes the outcome of each promise (either fulfilled or rejected). This can be useful if you want to run multiple independent operations concurrently and handle their results separately, without stopping at the first rejection like Promise.all does.
