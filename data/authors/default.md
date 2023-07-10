@@ -10,9 +10,14 @@ github: https://github.com/jinwood
 
 I'm a UK-based full-stack developer currently working at Cuckoo Internet as part of the platform team. We're building state-of-the-art serverless microservices and fast, attractive and user-friendly web interfaces.
 
-My passion for building great software drives me to constantly learn and grow. Over the past decade or so, I've worked with a variety of stacks and technologies. However, I've found my place with JavaScript and the node ecosystem. That said, I'm always interested in exploring new stacks and technologies.
+Currently my main technology focus is around:
 
-Currently I am working with react, redux and AWS during the day, and Deno / Fresh at home. I'm experienced with C# .NET and spent the first few years of my software career building web apps using this technology. I also have a strong grasp of Vue, Angular and vanilla JS.
+- JavaScript / TypeScript
+- Modern React.js (nextjs, hooks, context)
+- Consuming and building GraphQL APIs via small / focused microservices
+- Serverless (AWS Lambda, DynamoDB, SQS, CloudFormation)
+
+My passion for building great software drives me to constantly learn and grow. Over the past decade or so, I've worked with a variety of stacks and technologies. However, I've found my place with JavaScript and the node ecosystem - I'm always interested in exploring new stacks and technologies.
 
 # Employment
 
