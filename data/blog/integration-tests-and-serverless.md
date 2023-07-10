@@ -1,5 +1,5 @@
 ---
-title: Flaky integration test fun
+title: Handling flaky integration tests in a serverless environment
 summary: A tale of testing woes
 tags: [testing, serverless, aws]
 date: '2023-07-07'
