@@ -29,7 +29,7 @@ I'm currently part of the Cuckoo flock, contributing to the creation of the UK's
 
 My experience includes developing contracts microservices utilizing AWS Lambda, SQS, DynamoDB, and CloudFormation. Additionally, I played a significant role in a major rebranding project, successfully implementing a fresh design for the Cuckoo blog.
 
-My day to day activities include....
+My day to day activities include:
 
 - Creating new microservices to extend / improve our existing platform
 - Building new features for both our customer facing website, and internal CRM / tools
