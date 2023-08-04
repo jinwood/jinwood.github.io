@@ -107,8 +107,10 @@ For my first project, I created a data import tool that could convert CSV files 
 
 ## Hobbies and Interests
 
-A proud practitioner of Brazilian Jiu-Jitsu at Gracie Barra Frome, under the guidance of Professor Cal Swift. It's an incredible martial art that challenges me both mentally and physically.
+I'm a huge music fan and I love exploring different genres. You can often find me at concerts or festivals, soaking in the live experience.
 
-Total Formula 1 fan! I absolutely love the thrill and excitement of the races. I make it a point to attend at least one race every year. So far, I've been lucky enough to experience the amazing events at Spa and Hungary. They were absolutely fantastic and filled with adrenaline-pumping moments.
+Travel's been a big part of my life. I've been lucky enough to visit many countries.
 
-I play guitar (badly) and listen to old bands from the 70s (someone has to). Favourites include Frank Zappa, Genesis, Yes.
+I'm also into gaming. I really like indie games like Slay the Spire and enjoy the competitive scene of CS GO.
+
+I believe in staying fit. I practice Brazilian Jiu-Jitsu, but I'm taking a little break right now due to an injury.
