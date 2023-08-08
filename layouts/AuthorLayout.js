@@ -19,7 +19,7 @@ export default function AuthorLayout({ children, frontMatter }) {
               <p className="font-bold">Company:</p>
               <p className="mb-2">Cuckoo Internet</p>
               <p className="font-bold">Current Location:</p>
-              <p className="mb-2">Somerset, UK</p>
+              <p className="mb-2">Bournemouth, UK</p>
             </div>
 
             <div>
