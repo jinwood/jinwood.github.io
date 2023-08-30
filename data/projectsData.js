@@ -5,6 +5,7 @@ const projectsData = [
     company blog. This involved working with the marketing & design teams to bring their vision to life. This was built using our own homegrown UI library, yolk - https://design.cuckoo.co`,
     imgSrc: '/static/images/cuckoo-blog-home.png',
     href: 'https://www.cuckoo.co/blog',
+    //images: [{ url: 'foo' }],
   },
   {
     title: 'LetMe CRM',
