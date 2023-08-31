@@ -3,9 +3,12 @@ const projectsData = [
     title: 'Cuckoo Blog',
     description: `My first major project at Cuckoo internet was implementing a complete redesign of the'
     company blog. This involved working with the marketing & design teams to bring their vision to life. This was built using our own homegrown UI library, yolk - https://design.cuckoo.co`,
-    imgSrc: '/static/images/cuckoo-blog-home.png',
+    imgSrc: '/static/images/cuckoo-1.png',
     href: 'https://www.cuckoo.co/blog',
-    //images: [{ url: 'foo' }],
+    images: [
+      { url: 'cuckoo-1.png', alt: 'A screenshot of the blog in mobile' },
+      { url: 'cuckoo-2.png', alt: 'A screenshot of the blog in desktop' },
+    ],
   },
   {
     title: 'LetMe CRM',
