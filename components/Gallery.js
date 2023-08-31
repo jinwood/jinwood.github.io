@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import Icon from './icons'
 
 export default function Gallery({ images }) {
@@ -7,10 +7,38 @@ export default function Gallery({ images }) {
   const [currentImageUrl, setCurrentImageUrl] = useState(images[0].url)
   const [currentImageAlt, setCurrentImageAlt] = useState(images[0].alt)
 
+  const closeModal = useCallback(() => {
+    setShowModal(false)
+  }, [])
+
+  const openModal = () => {
+    setShowModal(true)
+  }
+
+  const nextImage = useCallback(() => {
+    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length)
+    setCurrentImageUrl(images[currentImageIndex].url)
+    setCurrentImageAlt(images[currentImageIndex].alt)
+  }, [currentImageIndex, images])
+
+  const prevImage = useCallback(() => {
+    setCurrentImageIndex((prevIndex) => (prevIndex + images.length - 1) % images.length)
+    setCurrentImageUrl(images[currentImageIndex].url)
+    setCurrentImageAlt(images[currentImageIndex].alt)
+  }, [currentImageIndex, images])
+
   useEffect(() => {
     const handleKeyDown = (event) => {
       if (event.key === 'Escape') {
         closeModal()
+      }
+      if (event.key === 'ArrowLeft') {
+        console.log(0)
+        prevImage()
+      }
+      if (event.key === 'ArrowRight') {
+        console.log(1)
+        nextImage()
       }
     }
 
@@ -19,27 +47,7 @@ export default function Gallery({ images }) {
     return () => {
       window.removeEventListener('keydown', handleKeyDown)
     }
-  }, [])
-
-  const closeModal = () => {
-    setShowModal(false)
-  }
-
-  const openModal = () => {
-    setShowModal(true)
-  }
-
-  const nextImage = () => {
-    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length)
-    setCurrentImageUrl(images[currentImageIndex].url)
-    setCurrentImageAlt(images[currentImageIndex].alt)
-  }
-
-  const prevImage = () => {
-    setCurrentImageIndex((prevIndex) => (prevIndex + images.length - 1) % images.length)
-    setCurrentImageUrl(images[currentImageIndex].url)
-    setCurrentImageAlt(images[currentImageIndex].alt)
-  }
+  }, [closeModal, prevImage, nextImage])
 
   return (
     <div>
