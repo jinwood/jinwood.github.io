@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-import Image from 'next/image'
 import Icon from './icons'
 
 export default function Gallery({ images }) {
@@ -63,7 +62,6 @@ export default function Gallery({ images }) {
           <img
             src={currentImageUrl}
             alt={currentImageAlt}
-            layout="fill"
             className="max-h-full max-w-full object-contain"
           />
           <button
