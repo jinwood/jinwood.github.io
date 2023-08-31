@@ -58,7 +58,6 @@ export async function getPosts(): Promise<Post[]> {
 
   for await (const file of files) {
     const slug = file.name.replace('.md', '')
-    console.log(slug)
     promises.push(getPost(slug))
   }
 

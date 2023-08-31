@@ -1,3 +1,4 @@
+const IMAGES_BASE = '/static/images/'
 const projectsData = [
   {
     title: 'Cuckoo Blog',
@@ -6,8 +7,8 @@ const projectsData = [
     imgSrc: '/static/images/cuckoo-1.png',
     href: 'https://www.cuckoo.co/blog',
     images: [
-      { url: 'cuckoo-1.png', alt: 'A screenshot of the blog in mobile' },
-      { url: 'cuckoo-2.png', alt: 'A screenshot of the blog in desktop' },
+      { url: `${IMAGES_BASE}cuckoo-1.png`, alt: 'A screenshot of the blog in mobile' },
+      { url: `${IMAGES_BASE}cuckoo-2.png`, alt: 'A screenshot of the blog in desktop' },
     ],
   },
   {

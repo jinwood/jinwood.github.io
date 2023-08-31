@@ -31,18 +31,25 @@ const Card = ({ title, description, imgSrc, href, images }) => {
             />
           ))}
         <div className="p-6">
-          <h2 className="mb-3 text-2xl font-bold leading-8 tracking-tight">
-            {href ? (
-              <Link href={href} aria-label={`Link to ${title}`}>
-                {title}
-              </Link>
-            ) : (
-              title
+          <div className="flex items-center">
+            <h2 className="mb-3 text-2xl font-bold leading-8 tracking-tight">
+              {href ? (
+                <Link href={href} aria-label={`Link to ${title}`}>
+                  {title}
+                </Link>
+              ) : (
+                title
+              )}
+            </h2>
+            &nbsp;
+            {images && (
+              <div className="mb-3 font-bold leading-8">
+                <Gallery images={images} />
+              </div>
             )}
-
-            {images && <Gallery images={images} />}
-          </h2>
+          </div>
           <p className="prose mb-3 max-w-none text-gray-500 dark:text-gray-400">{description}</p>
+
           {href && (
             <Link
               href={href}
