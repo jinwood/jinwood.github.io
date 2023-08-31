@@ -59,7 +59,8 @@ export default function Gallery({ images }) {
           >
             &#10094;
           </button>
-          <Image
+          {/* eslint-disable-next-line @next/next/no-img-element*/}
+          <img
             src={currentImageUrl}
             alt={currentImageAlt}
             layout="fill"
