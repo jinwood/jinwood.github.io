@@ -41,7 +41,7 @@ export default function AuthorLayout({ children, frontMatter }) {
           <hr className="my-4 border-gray-200 dark:border-gray-700" />
         </div>
         <div className="items-start space-y-2 xl:grid xl:grid-cols-3 xl:gap-x-8 xl:space-y-0">
-          <div className="flex flex-col items-center pt-8 print:hidden">
+          <div className="print-none flex flex-col items-center pt-8">
             <Image
               src={avatar}
               alt="avatar"
@@ -59,7 +59,9 @@ export default function AuthorLayout({ children, frontMatter }) {
               <SocialIcon kind="twitter" href={twitter} />
             </div>
           </div>
-          <div className="prose max-w-none pb-8 pt-8 dark:prose-dark xl:col-span-2">{children}</div>
+          <div className="print-full-width prose max-w-none pb-8 pt-8 dark:prose-dark xl:col-span-2">
+            {children}
+          </div>
         </div>
       </div>
     </>
