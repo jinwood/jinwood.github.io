@@ -60,24 +60,29 @@ export default function Gallery({ images }) {
           >
             &times;
           </button>
-          <button
-            onClick={prevImage}
-            className="absolute left-4 top-1/2 z-50 -translate-y-1/2 transform text-3xl text-white focus:outline-none"
-          >
-            &#10094;
-          </button>
+          <div className="absolute left-4 top-1/2 z-50 h-20 w-20 cursor-pointer">
+            <button
+              onClick={prevImage}
+              className="absolute left-4 top-1/2 z-50 -translate-y-1/2 transform text-3xl text-white focus:outline-none"
+            >
+              &#10094;
+            </button>
+          </div>
           {/* eslint-disable-next-line @next/next/no-img-element*/}
           <img
             src={currentImageUrl}
             alt={currentImageAlt}
             className="max-h-full max-w-full object-contain"
           />
-          <button
-            className="absolute right-4 top-1/2 z-50 -translate-y-1/2 transform text-3xl text-white focus:outline-none"
+
+          <div
+            className="absolute right-4 top-1/2 z-50 h-20 w-20 cursor-pointer"
             onClick={nextImage}
           >
-            &#10095;
-          </button>
+            <button className="absolute right-4 top-1/2 z-50 -translate-y-1/2 transform text-3xl text-white focus:outline-none">
+              &#10095;
+            </button>
+          </div>
         </div>
       )}
     </div>
