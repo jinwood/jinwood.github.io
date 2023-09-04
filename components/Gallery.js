@@ -66,7 +66,7 @@ export default function Gallery({ images }) {
                 e.stopPropagation()
                 prevImage()
               }}
-              className="z-50 text-3xl text-white focus:outline-none"
+              className="z-50 text-2xl text-white focus:outline-none"
             >
               &#10094;
             </button>
@@ -83,7 +83,7 @@ export default function Gallery({ images }) {
             onClick={nextImage}
           >
             <button
-              className="text-3xl text-white focus:outline-none"
+              className="align-middle text-2xl text-white focus:outline-none"
               onClick={(e) => {
                 e.stopPropagation()
                 nextImage()
