@@ -59,7 +59,7 @@ export default function Gallery({ images }) {
           </button>
           <div
             onClick={prevImage}
-            className="absolute left-4 top-1/2 z-50 flex h-20 w-20 cursor-pointer items-center justify-center rounded bg-black"
+            className="absolute left-4 top-1/2 z-50 flex h-10 w-10 cursor-pointer items-center justify-center rounded bg-black"
           >
             <button
               onClick={(e) => {
@@ -79,7 +79,7 @@ export default function Gallery({ images }) {
           />
 
           <div
-            className="absolute right-4 top-1/2 z-50 flex h-20 w-20 cursor-pointer items-center justify-center rounded-sm bg-black"
+            className="absolute right-4 top-1/2 z-50 flex h-10 w-10 cursor-pointer items-center justify-center rounded-sm bg-black"
             onClick={nextImage}
           >
             <button
