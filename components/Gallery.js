@@ -4,8 +4,7 @@ import Icon from './icons'
 export default function Gallery({ images }) {
   const [showModal, setShowModal] = useState(false)
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
-  const [currentImageUrl, setCurrentImageUrl] = useState(images[0].url)
-  const [currentImageAlt, setCurrentImageAlt] = useState(images[0].alt)
+  const [currentImage, setCurrentImage] = useState(images[0])
 
   const closeModal = useCallback(() => {
     setShowModal(false)
@@ -16,15 +15,16 @@ export default function Gallery({ images }) {
   }
 
   const nextImage = useCallback(() => {
+    console.log('next')
     setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length)
-    setCurrentImageUrl(images[currentImageIndex].url)
-    setCurrentImageAlt(images[currentImageIndex].alt)
-  }, [currentImageIndex, images])
+  }, [images])
 
   const prevImage = useCallback(() => {
     setCurrentImageIndex((prevIndex) => (prevIndex + images.length - 1) % images.length)
-    setCurrentImageUrl(images[currentImageIndex].url)
-    setCurrentImageAlt(images[currentImageIndex].alt)
+  }, [images])
+
+  useEffect(() => {
+    setCurrentImage(images[currentImageIndex])
   }, [currentImageIndex, images])
 
   useEffect(() => {
@@ -33,11 +33,9 @@ export default function Gallery({ images }) {
         closeModal()
       }
       if (event.key === 'ArrowLeft') {
-        console.log(0)
         prevImage()
       }
       if (event.key === 'ArrowRight') {
-        console.log(1)
         nextImage()
       }
     }
@@ -48,7 +46,6 @@ export default function Gallery({ images }) {
       window.removeEventListener('keydown', handleKeyDown)
     }
   }, [closeModal, prevImage, nextImage])
-
   return (
     <div>
       <Icon kind="gallery" onClick={openModal} />
@@ -64,14 +61,20 @@ export default function Gallery({ images }) {
             onClick={prevImage}
             className="absolute left-4 top-1/2 z-50 flex h-20 w-20 cursor-pointer items-center justify-center rounded bg-black"
           >
-            <button onClick={prevImage} className="z-50 text-3xl text-white focus:outline-none">
+            <button
+              onClick={(e) => {
+                e.stopPropagation()
+                prevImage()
+              }}
+              className="z-50 text-3xl text-white focus:outline-none"
+            >
               &#10094;
             </button>
           </div>
           {/* eslint-disable-next-line @next/next/no-img-element*/}
           <img
-            src={currentImageUrl}
-            alt={currentImageAlt}
+            src={currentImage.url}
+            alt={currentImage.alt}
             className="max-h-full max-w-full object-contain"
           />
 
@@ -79,7 +82,13 @@ export default function Gallery({ images }) {
             className="absolute right-4 top-1/2 z-50 flex h-20 w-20 cursor-pointer items-center justify-center rounded-sm bg-black"
             onClick={nextImage}
           >
-            <button className="text-3xl text-white focus:outline-none" onClick={nextImage}>
+            <button
+              className="text-3xl text-white focus:outline-none"
+              onClick={(e) => {
+                e.stopPropagation()
+                nextImage()
+              }}
+            >
               &#10095;
             </button>
           </div>
