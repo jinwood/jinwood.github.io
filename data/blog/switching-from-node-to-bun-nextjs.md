@@ -1,5 +1,5 @@
 ---
-title: Switching your NextJS site from nodeJS to Bun
+title: Switching your NextJS site from Node.js to Bun
 summary: Quick & easy switching guide
 tags: [bun, nodejs, runtime, nextjs]
 date: '2023-09-10'
