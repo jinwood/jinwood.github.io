@@ -6,7 +6,11 @@
       "@/data/*": ["data/*"],
       "@/layouts/*": ["layouts/*"],
       "@/lib/*": ["lib/*"],
-      "@/css/*": ["css/*"]
+      "@/css/*": ["css/*"],
+      "lib": ["ESNext"],
+      "module": ["esnext"],
+      "target": ["esnext"],
+      "types": ["bun-types"]
     }
   }
 }
