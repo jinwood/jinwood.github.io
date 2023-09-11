@@ -7,8 +7,11 @@ const projectsData = [
     imgSrc: '/static/images/cuckoo-1.png',
     href: 'https://www.cuckoo.co/blog',
     images: [
-      { url: `${IMAGES_BASE}cuckoo-1.png`, alt: 'A screenshot of the blog in mobile' },
-      { url: `${IMAGES_BASE}cuckoo-2.png`, alt: 'A screenshot of the blog in desktop' },
+      { url: `${IMAGES_BASE}cuckoo-1.png`, alt: 'A screenshot of the blog root in mobile' },
+      { url: `${IMAGES_BASE}cuckoo-2.png`, alt: 'A screenshot of the blog root in desktop' },
+      { url: `${IMAGES_BASE}cuckoo-3.png`, alt: 'A screenshot of a blog article in desktop' },
+      { url: `${IMAGES_BASE}cuckoo-5.png`, alt: 'A screenshot of a blog article in mobile' },
+      { url: `${IMAGES_BASE}cuckoo-4.png`, alt: 'A screenshot of a blog guide in desktop' },
     ],
   },
   {
