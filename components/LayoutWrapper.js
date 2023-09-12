@@ -17,7 +17,7 @@ const LayoutWrapper = ({ children }) => {
               <div className="flex items-center justify-between">
                 <div className="mr-3">
                   <Image
-                    src="/static/images/day.jpg"
+                    src="/static/images/icon.png"
                     alt="Logo"
                     width={20}
                     height={20}
