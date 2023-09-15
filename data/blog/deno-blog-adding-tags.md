@@ -77,7 +77,7 @@ export async function getPosts(tag?: string): Promise<Post[]> {
 }
 ```
 
-## Displaying tags
+## Displaying tags
 
 Finally, we need to add markup to our `PostItem` component to display tags.
 

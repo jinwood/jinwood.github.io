@@ -16,7 +16,7 @@ Currently my main technology focus is around:
 - Modern React.js (nextjs, hooks, context)
 - CSS in JS (styled components etc)
 - GraphQL (Apollo)
-- Serverless (AWS Lambda, DynamoDB, SQS, CloudFormation)
+- Serverless (AWS Lambda, DynamoDB, SQS, CloudFormation, GCP)
 - Node.js
 
 My passion for building great software drives me to constantly learn and grow. Over the past decade or so, I've worked with a variety of stacks and technologies. However, I've found my place with JavaScript and the node ecosystem - I'm always interested in exploring new stacks and technologies.
