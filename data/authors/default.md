@@ -13,7 +13,7 @@ I'm a UK-based full-stack developer previously working at Cuckoo Internet as par
 Currently my main technology focus is around:
 
 - JavaScript / TypeScript
-- Modern React.js (nextjs, hooks, context)
+- Modern React.js (Next.js, hooks, context)
 - CSS in JS (styled components etc)
 - GraphQL (Apollo)
 - Serverless (AWS Lambda, DynamoDB, SQS, CloudFormation, GCP)
