@@ -8,7 +8,7 @@ linkedin: https://www.linkedin.com/in/julianinwood
 github: https://github.com/jinwood
 ---
 
-I am a highly motivated and adaptable full-stack developer based in the UK with a decade of experience in the field. My expertise revolves around modern JavaScript and TypeScript technologies, including:
+I am a highly motivated and adaptable full-stack developer based in the UK with nearly a decade of experience in the field. My expertise revolves around modern JavaScript and TypeScript technologies, including:
 
 - JavaScript / TypeScript
 - Node.js
