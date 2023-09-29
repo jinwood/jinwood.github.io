@@ -76,7 +76,7 @@ I have a proven track record of delivering impactful results throughout my caree
 
 #### Interface 247 - Junior Developer
 
-###### 04-2012 - 07-2014
+###### 01-2011 - 07-2014
 
 - Transitioned from a call center operative to a tech role, demonstrating adaptability and eagerness to learn.
 - Developed Excel formulas to streamline internal workflows.
