@@ -72,8 +72,7 @@ I have a proven track record of delivering impactful results throughout my caree
 
 - Maintained and extended features for the Continuity CMS for a major insurance provider.
 - Managed and updated a bespoke logging application for Mind charity.
-- Created email marketing templates.
-- Provided general web support for various clients.
+- Created email marketing templates and provided general web support for various clients.
 
 #### Interface 247 - Junior Developer
 
@@ -87,4 +86,4 @@ I have a proven track record of delivering impactful results throughout my caree
 
 ### Hobbies and Interests
 
-I'm a huge music fan and I love exploring different genres. You can often find me at concerts or festivals, soaking in the live experience. Travel's been a big part of my life. I've been lucky enough to visit many countries. I'm also into gaming. I really like indie games like Slay the Spire and enjoy the competitive scene of CS GO. I try to stay fit. I practice Brazilian Jiu-Jitsu, but I'm taking a little break right now due to an injury.
+I'm a huge music fan and I love exploring different genres. You can often find me at concerts or festivals, soaking in the live experience. Travel's been a big part of my life. I've been lucky enough to visit many countries. I'm also into gaming. I really like indie games like Slay the Spire and enjoy the competitive scene of Counterstrike. I try to stay fit. I practice Brazilian Jiu-Jitsu, but I'm taking a little break right now due to an injury.
