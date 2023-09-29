@@ -8,18 +8,16 @@ linkedin: https://www.linkedin.com/in/julianinwood
 github: https://github.com/jinwood
 ---
 
-I'm a UK-based full-stack developer previously working at Cuckoo Internet as part of the platform team. Working on state-of-the-art serverless microservices and fast, attractive and user-friendly web interfaces. After taking voluntary redundancy in August, I'm available for new opportunities.
-
-I am a UK-based full-stack developer with a passion for building great software. With a strong background with various technologies, my main expertise lies in:
+I am a highly motivated and adaptable full-stack developer based in the UK with a decade of experience in the field. My expertise revolves around modern JavaScript and TypeScript technologies, including:
 
 - JavaScript / TypeScript
+- Node.js
 - Modern React.js (Next.js, hooks, context)
 - CSS in JS (styled components etc)
 - GraphQL (Apollo)
 - Serverless (AWS Lambda, DynamoDB, SQS, CloudFormation, GCP)
-- Node.js
 
-My passion for building great software drives me to constantly learn and grow. Over the past decade or so, I've worked with a variety of stacks and technologies. However, I've found my place with JavaScript and the node ecosystem - I'm always interested in exploring new stacks and technologies.
+I have a proven track record of delivering impactful results throughout my career, such as leading the development of serverless microservices and contributing to rebranding efforts. I am passionate about building innovative and user-friendly web interfaces and continuously strive to expand my knowledge by exploring new technology stacks. My commitment to excellence and a strong foundation in software development make me a valuable asset for any forward-thinking team. Following voluntary redundancy, I am eagerly seeking new opportunities to apply my skills and contribute to exciting projects.
 
 # Employment
 
@@ -30,16 +28,16 @@ My passion for building great software drives me to constantly learn and grow. O
 - Developed serverless microservices using AWS technologies, such as Lambda, SQS, DynamoDB, and CloudFormation.
 - Played a pivotal role in rebranding efforts, focusing on redesigning the Cuckoo blog.
 - Significantly enhanced both customer-facing websites and the internal CRM system.
-- Actively participated in architecture discussions, conducted code reviews, and delivered impressive demos.
+- Actively participated in architecture discussions, conducted code reviews.
 
-#### Quadrotech / Quest - Frontend Developer
+#### Quadrotech - Frontend Developer
 
 ###### 08-2019 - 04-2022
 
-- Developed and tested features for Nova and On Demand using React, Redux, and Angular.
-- Engaged in design discussions and presented features to stakeholders.
-- Conducted unit and integration testing using Cypress.
-- Mentored junior team members and provided technical guidance.
+- Spearheaded the development and testing of features for Nova and On Demand using React, Redux and Angular.
+- Engaged in productive design discussions and effectively presented features to stakeholders.
+- Conducted rigorous unit, integration and e2e testing using RTL and Cypress.
+- Served as a mentor to junior team members, providing valuable technical guidance.
 
 #### Just Eat - Frontend Developer
 
@@ -63,16 +61,16 @@ My passion for building great software drives me to constantly learn and grow. O
 
 ###### 06-2015 - 04-2017
 
-- Developed a call center application featuring Twilio integration and microservices architecture.
+- Successfully developed a call center application featuring Twilio integration and microservices architecture.
 - Built a customer-oriented marketing application integrated with customer.io and Twilio.
 - Created a CMS/Caseworking web application using React and Flux.
-- Collaborated across teams to integrate new features into existing microservices.
+- Collaborated seamlessly across teams to integrate new features into existing microservices.
 
 #### BSS Digital - Software Developer
 
 ###### 07-2014 - 06-2015
 
-- Maintained and extended features for Continuity CMS for a large insurance provider.
+- Maintained and extended features for the Continuity CMS for a major insurance provider.
 - Managed and updated a bespoke logging application for Mind charity.
 - Created email marketing templates.
 - Provided general web support for various clients.
@@ -81,11 +79,11 @@ My passion for building great software drives me to constantly learn and grow. O
 
 ###### 04-2012 - 07-2014
 
-- Joined as a call center operative but was moved into a tech role
-- Wrote Excel formulas to facilitate internal workflows.
-- Developed a data import tool that converted CSV files to a system-compatible format using SQL.
-- Added a webforms front-end layer to data import tool.
-- Assisted in the development of the mygoodslocker website.
+- Transitioned from a call center operative to a tech role, demonstrating adaptability and eagerness to learn.
+- Developed Excel formulas to streamline internal workflows.
+- Created a data import tool that converted CSV files into a system-compatible format using SQL.
+- Added a webforms front-end layer to the data import tool.
+- Contributed to the development of the mygoodslocker website.
 
 ### Hobbies and Interests
 
