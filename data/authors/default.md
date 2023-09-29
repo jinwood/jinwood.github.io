@@ -10,7 +10,7 @@ github: https://github.com/jinwood
 
 I'm a UK-based full-stack developer previously working at Cuckoo Internet as part of the platform team. Working on state-of-the-art serverless microservices and fast, attractive and user-friendly web interfaces. After taking voluntary redundancy in August, I'm available for new opportunities.
 
-Currently my main technology focus is around:
+I am a UK-based full-stack developer with a passion for building great software. With a strong background with various technologies, my main expertise lies in:
 
 - JavaScript / TypeScript
 - Modern React.js (Next.js, hooks, context)
@@ -27,10 +27,10 @@ My passion for building great software drives me to constantly learn and grow. O
 
 ###### 04-2022 - Present
 
-- Developed contracts microservices using AWS technologies like Lambda, SQS, DynamoDB, and CloudFormation.
-- Played a key role in rebranding, focusing on Cuckoo blog redesign.
-- Worked extensively on enhancing both customer-facing website and internal CRM.
-- Collaborated in architecture discussions, code reviews, and demos.
+- Developed serverless microservices using AWS technologies, such as Lambda, SQS, DynamoDB, and CloudFormation.
+- Played a pivotal role in rebranding efforts, focusing on redesigning the Cuckoo blog.
+- Significantly enhanced both customer-facing websites and the internal CRM system.
+- Actively participated in architecture discussions, conducted code reviews, and delivered impressive demos.
 
 #### Quadrotech / Quest - Frontend Developer
 
