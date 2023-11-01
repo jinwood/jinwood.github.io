@@ -17,7 +17,7 @@ I am a highly motivated and adaptable full-stack developer based in the UK with 
 - GraphQL (Apollo)
 - Serverless (AWS Lambda, DynamoDB, SQS, CloudFormation, GCP)
 
-I have a proven track record of delivering impactful results throughout my career. I am passionate about building innovative and user-friendly web interfaces and continuously strive to expand my knowledge. My commitment to excellence and a strong foundation in software development make me a valuable asset for any forward-thinking team. Following voluntary redundancy, I am eagerly seeking new opportunities to apply my skills and contribute to exciting projects.
+I have a proven track record of delivering impactful results throughout my career. I am passionate about building innovative and user-friendly web interfaces and continuously strive to expand my knowledge. My commitment to excellence and a strong foundation in software development make me a valuable asset for any forward-thinking team. I am currently working with Builder.ai in the UI Engine team, enhancing their Figma translation software using Node.js, Kubernetes and React.js.
 
 # Employment
 
