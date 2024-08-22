@@ -34,7 +34,7 @@ export default function AuthorLayout({ children, frontMatter }) {
             </div>
           </div>
         </div>
-        <div className="space-y-2 pb-8 pt-6 print:hidden md:space-y-5">
+        <div className="space-y-2 pb-8 pt-6 md:space-y-5 print:hidden">
           <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
             About
           </h1>
