@@ -56,10 +56,16 @@ jobs:
         run: bun install
       - name: Build with Next.js
         run: bun run build
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
-        with:
-          path: .
+      - name: List generated files
+        run: |
+          echo "Root directory:"
+          ls -la
+          echo "Contents of .next directory:"
+          ls -la .next || echo ".next directory not found"
+            - name: Upload artifact
+              uses: actions/upload-pages-artifact@v1
+              with:
+                path: .
 
   # Deployment job
   deploy:
