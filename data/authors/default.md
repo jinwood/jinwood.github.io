@@ -19,11 +19,11 @@ Full-stack engineer with nearly a decade of experience, specializing in modern J
 - GraphQL (Apollo, AppSync)
 - Serverless (AWS Lambda, DynamoDB, SQS, CloudFormation, GCP)
 
-An experienced, efficient and friendly software engineer with a broad range of experience. Adaptable, dependable and collaborative. I am currently working with Cuckoo Fiber, building out our backend web stack in preparation of some exciting new products.
+An experienced, efficient and friendly software engineer with a broad range of experience. Adaptable, dependable and collaborative. I am currently working with Cuckoo Fibre, building out our backend web stack in preparation of some exciting new products.
 
 # Employment
 
-#### Cuckoo Internet - Full Stack Engineer
+#### Cuckoo Fibre - Full Stack Engineer
 
 ###### 04-2022 - Present
 
