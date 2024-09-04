@@ -34,11 +34,11 @@ During my tenure at Cuckoo, I have played a pivotal role in various projects. In
 - Significantly enhanced both customer-facing websites and the internal CRM system.
 - Actively participated in architecture discussions, conducted code reviews.
 
-#### Quadrotech - Frontend Engineer
+#### Quest - Frontend Engineer
 
 ###### 08-2019 - 04-2022
 
-- Spearheaded the development and testing of features for Nova and On Demand using React, Redux and Angular.
+- Spearheaded the development and testing of features for Nova and OnDemand using React, Redux and Angular.
 - Engaged in productive design discussions and effectively presented features to stakeholders.
 - Conducted rigorous unit, integration and e2e testing using RTL and Cypress.
 - Served as a mentor to junior team members, providing valuable technical guidance.
