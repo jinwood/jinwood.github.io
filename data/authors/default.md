@@ -27,12 +27,15 @@ An experienced, efficient and friendly software engineer with a broad range of e
 
 ###### 04-2022 - Present
 
-During my tenure at Cuckoo, I have played a pivotal role in various projects. Initially, I led a complete redesign of the cuckoo blog, meeting a tight deadline to coincide with the launch of the new [cuckoo brand](https://www.cuckoo.co/articles/introducing-our-new-brand-and-design-system). My next major piece of work was a design & build for a contracts microservice. This would handle the lifecycle between a customer and cuckoo, acting as the "source of truth" for things like product selection, dates, contract versions, etc. The project was build using the latest AWS features and tools, such as Lambda, CDK, DynamoDB, SQS and more. Post-acquisition, as a team we've been pushing our stack forward and have adopted a fully distributed system using Kafka (AWS MSK).
+At Cuckoo, I've contributed to several key projects using a modern tech stack of Node.js, TypeScript, React, and Next.js, alongside AWS services including Lambda, DynamoDB, CDK, SQS, and MSK (Kafka). Notable achievements include:
 
-- Developed serverless microservices using AWS technologies, such as Lambda, SQS, DynamoDB, and CloudFormation.
-- Played a pivotal role in rebranding efforts, focusing on redesigning the Cuckoo blog.
-- Significantly enhanced both customer-facing websites and the internal CRM system.
-- Actively participated in architecture discussions, conducted code reviews.
+- Leading a complete redesign of the Cuckoo blog, aligning with the launch of our new brand identity.
+- Designing and building a contracts microservice to manage customer lifecycle, product selection, and contract versions.
+- Transitioning to a fully distributed system architecture using Kafka (AWS MSK) post-acquisition.
+- Developing serverless microservices and enhancing both customer-facing websites and our internal CRM system.
+- Actively participating in architecture discussions and conducting code reviews.
+
+Our tech ecosystem leverages serverless architecture and event-driven design, allowing us to build scalable, efficient, and maintainable systems to support Cuckoo's growing business and prepare for exciting new product launches.
 
 #### Quest - Frontend Engineer
 
