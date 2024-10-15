@@ -13,27 +13,27 @@ Here's the basic outline of what I will do:
 
 1. Define data structure
 
-- create interfaces for css rules, selectors, decorators etc
+   - create interfaces for css rules, selectors, decorators etc
 
 2. Implement a tokenizer
 
-- Break the CSS string into tokens (rules, selectors, decorators etc)
+   - Break the CSS string into tokens (rules, selectors, decorators etc)
 
 3. Create a parser
 
-- Parse the tokens to create an Abstract Syntax Tree
+   - Parse the tokens to create an Abstract Syntax Tree
 
 4. Handle the different CSS constructs
 
-- Selectors, declarations etc
+   - Selectors, declarations etc
 
 5. Implement error handling
 
-- Detect and report syntax errors
+   - Detect and report syntax errors
 
 6. Build the final output
 
-- Convert the AST into a usable format eg object representation
+   - Convert the AST into a usable format eg object representation
 
 I'm fully expecting this project to be _rough_ (understatement) as I haven't attempted anything like this before. But it should be fun and teach me some stuff!
 
