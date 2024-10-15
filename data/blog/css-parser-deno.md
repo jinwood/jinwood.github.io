@@ -1,6 +1,6 @@
 ---
 title: Writing a CSS parser using TypeScript and deno
-summary: Writing CSS isn't painful enough, let's parse it too"
+summary: Writing CSS isn't painful enough, let's parse it too
 date: '2024-10-09'
 tags: [typescript, deno, css]
 ---
