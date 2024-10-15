@@ -3,7 +3,6 @@ title: Writing a CSS parser using TypeScript and deno
 summary: Writing CSS isn't painful enough, let's parse it too"
 date: '2024-10-09'
 tags: [typescript, deno, css]
-summary: Writing a CSS parser
 ---
 
 I need a project to tide me over that challenges me and teaches me more about web technologies. I've never written a "tool" and I'd like to learn more about css, so I figured a css parser could be a fun thing to experiement with.
