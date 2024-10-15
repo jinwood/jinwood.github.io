@@ -5,7 +5,7 @@ date: '2024-10-09'
 tags: [typescript, deno, css]
 ---
 
-I need a project to tide me over that challenges me and teaches me more about web technologies. I've never written a "tool" and I'd like to learn more about css, so I figured a css parser could be a fun thing to experiement with.
+I need a project to tide me over and provides some challenge / stuff to learn. I've never written something as part of the developer toolchain and I'd like to learn more about css, so I figured a css parser could be a fun thing to experiement with.
 
 I'm going to treat the next series of posts as a scratch pad / notes from the experience.
 
