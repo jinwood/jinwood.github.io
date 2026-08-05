@@ -1,17 +1,18 @@
 ---
 name: Julian Inwood
 avatar: /static/images/avatar.jpg
-occupation: Full stack engineer
-company: Cuckoo Internet
+occupation: Senior Software Engineer
+company: Just Eat Takeaway.com
 email: jinwood@protonmail.com
 linkedin: https://www.linkedin.com/in/julianinwood
 github: https://github.com/jinwood
 ---
 
-Full-stack engineer with nearly a decade of experience, specializing in modern JavaScript, TypeScript, and web technologies. Based in Bristol, UK.
+Full-stack engineer with over a decade of experience, specialising in modern JavaScript, TypeScript, and web technologies. Based in Bristol, UK.
 
 **Core Skills**
 
+- Agentic development (Opencode / Claude Code, context compression, advanced prompts, skill development)
 - JavaScript / TypeScript
 - Node.js
 - Modern React.js (Next.js, hooks, context)
@@ -19,23 +20,39 @@ Full-stack engineer with nearly a decade of experience, specializing in modern J
 - GraphQL (Apollo, AppSync)
 - Serverless (AWS Lambda, DynamoDB, SQS, CloudFormation, GCP)
 
-An experienced, efficient and friendly software engineer with a broad range of experience. Adaptable, dependable and collaborative. I am currently working with Cuckoo Fibre, building out our backend web stack in preparation of some exciting new products.
+An experienced, efficient and friendly software engineer with a broad range of experience. Adaptable, dependable and collaborative. I am currently working with Just Eat Takeaway.com on the Unified TopRank team, building Vue 3 experiences for our restaurant partners.
 
 # Employment
 
-#### Cuckoo Fibre - Full Stack Engineer
+#### Just Eat Takeaway.com - Senior Software Engineer
 
-###### 04-2022 - Present
+###### 03-2025 - Present
 
-At Cuckoo, I've contributed to several key projects using a modern tech stack of Node.js, TypeScript, React, and Next.js, alongside AWS services including Lambda, DynamoDB, CDK, SQS, and MSK (Kafka). Notable achievements include:
+Senior Engineer on the Unified TopRank team. I work primarily with Vue 3, ensuring a seamless and effective experience for our restaurant partners seeking enhanced visibility on the platform.
 
-- Leading a complete redesign of the Cuckoo blog, aligning with the launch of our new brand identity.
-- Designing and building a contracts microservice to manage customer lifecycle, product selection, and contract versions.
-- Transitioning to a fully distributed system architecture using Kafka (AWS MSK) post-acquisition.
-- Developing serverless microservices and enhancing both customer-facing websites and our internal CRM system.
-- Actively participating in architecture discussions and conducting code reviews.
+Current projects include:
 
-Our tech ecosystem leverages serverless architecture and event-driven design, allowing us to build scalable, efficient, and maintainable systems to support Cuckoo's growing business and prepare for exciting new product launches.
+- Global product rollout
+- webpack to Vite migration
+- Implementing a Playwright test suite
+
+#### Cuckoo - Software Engineer
+
+###### 06-2022 - 03-2025
+
+Member of the Customer Experience squad, delivering a delightful and stress-free experience for our customers. Our efforts were geared towards the development of web features within our cloud-native AWS platform and Next.js website. I was deeply involved in building attractive, user-centric landing pages and driving full-stack development to ensure streamlined user journeys. A notable accomplishment was the complete redesign of the blog microsite, aligning it with the brand's new look and feel.
+
+I also contributed as a member of the Platform squad, playing a pivotal role in building the Contract Service. This service managed customer contracts for both broadband and physical products, overseeing the entire lifecycle from creation to deletion, ensuring clarity on commitment durations and accurate start/end dates. It was also the definitive source for up-to-date pricing, adjusting contracts in line with any price changes so customers were always charged the appropriate amount.
+
+Technologies used:
+
+- TypeScript
+- CloudFormation
+- Lambda
+- SQS
+- DynamoDB
+- Next.js
+- React.js
 
 #### Quest - Frontend Engineer
 
