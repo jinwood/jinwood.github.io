@@ -9,7 +9,7 @@ interface Props {
 
 const { project } = Astro.props
 const { title, description, imgSrc, href, images } = project.data
-const link = href ?? `/projects/${project.id}`
+const link = href ?? `/projects/${project.id}/`
 const hasGallery = images.length > 0
 ---
 
@@ -28,7 +28,7 @@ const hasGallery = images.length > 0
     <p class="prose max-w-none text-gray-500 dark:text-gray-400">{description}</p>
     <div class="mt-4">
       {hasGallery && (
-        <a href={`/projects/${project.id}`} class="text-primary-500 hover:text-primary-600">
+        <a href={`/projects/${project.id}/`} class="text-primary-500 hover:text-primary-600">
           View gallery
         </a>
       )}
