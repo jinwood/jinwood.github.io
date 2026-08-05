@@ -1,0 +1,13 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import AboutLayout from '../layouts/AboutLayout.astro'
+import { getCollection } from 'astro:content'
+import { siteConfig } from '../siteConfig'
+
+const author = (await getCollection('authors')).find((a) => a.id === 'default')
+if (!author) throw new Error('No default author found')
+---
+
+<BaseLayout description={siteConfig.description} image={author.data.avatar}>
+  <AboutLayout author={author} />
+</BaseLayout>

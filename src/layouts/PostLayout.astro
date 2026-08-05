@@ -1,0 +1,124 @@
+---
+import BaseLayout from './BaseLayout.astro'
+import Tag from '../components/Tag.astro'
+import { formatDate } from '../utils/formatDate'
+import { siteConfig } from '../siteConfig'
+import type { CollectionEntry } from 'astro:content'
+
+interface Props {
+  post: CollectionEntry<'blog'>
+  prev?: CollectionEntry<'blog'> | null
+  next?: CollectionEntry<'blog'> | null
+}
+
+const { post, prev, next } = Astro.props
+const { title, date, summary, tags, images } = post.data
+
+const editUrl = `${siteConfig.siteRepo}/blob/master/src/content/blog/${post.id}.md`
+const pageUrl = `${siteConfig.siteUrl}/blog/${post.id}/`
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  mainEntityOfPage: { '@type': 'WebPage', '@id': pageUrl },
+  headline: title,
+  image: images.length > 0 ? images : [siteConfig.socialBanner],
+  datePublished: date?.toISOString(),
+  author: { '@type': 'Person', name: siteConfig.author },
+  publisher: {
+    '@type': 'Organization',
+    name: siteConfig.author,
+    logo: { '@type': 'ImageObject', url: siteConfig.siteUrl + siteConfig.siteLogo },
+  },
+  description: summary,
+}
+---
+
+<BaseLayout
+  title={title}
+  description={summary}
+  type="article"
+  image={images[0] ?? siteConfig.socialBanner}
+  canonicalUrl={pageUrl}
+  structuredData={structuredData}
+>
+  <article>
+    <div class="xl:divide-y xl:divide-gray-200 xl:dark:divide-gray-700">
+      <header class="pt-6 xl:pb-6">
+        <div class="space-y-1 text-center">
+          <dl class="space-y-10">
+            <div>
+              <dt class="sr-only">Published on</dt>
+              <dd class="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
+                <time datetime={date?.toISOString()}>{date && formatDate(date)}</time>
+              </dd>
+            </div>
+          </dl>
+          <div>
+            <h1 class="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl md:leading-13">
+              {title}
+            </h1>
+          </div>
+        </div>
+      </header>
+      <div class="divide-y divide-gray-200 pb-8 dark:divide-gray-700 xl:grid xl:grid-cols-4 xl:gap-x-6 xl:divide-y-0">
+        <div class="prose max-w-none pb-8 pt-10 dark:prose-invert xl:col-span-4">
+          <slot />
+        </div>
+        <div class="pb-6 pt-6 text-sm text-gray-700 dark:text-gray-300 xl:col-span-4">
+          <a href={editUrl} class="hover:text-primary-500">
+            View on GitHub
+          </a>
+        </div>
+        <footer class="xl:col-span-4">
+          <div class="divide-gray-200 text-sm font-medium leading-5 dark:divide-gray-700 xl:divide-y">
+            {tags && tags.length > 0 && (
+              <div class="py-4 xl:py-8">
+                <h2 class="text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400">
+                  Tags
+                </h2>
+                <div class="flex flex-wrap">
+                  {tags.map((tag) => (
+                    <Tag text={tag} />
+                  ))}
+                </div>
+              </div>
+            )}
+            {(next || prev) && (
+              <div class="flex justify-between py-4 xl:block xl:space-y-8 xl:py-8">
+                {prev && (
+                  <div>
+                    <h2 class="text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400">
+                      Previous Article
+                    </h2>
+                    <div class="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400">
+                      <a href={`/blog/${prev.id}/`}>{prev.data.title}</a>
+                    </div>
+                  </div>
+                )}
+                {next && (
+                  <div>
+                    <h2 class="text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400">
+                      Next Article
+                    </h2>
+                    <div class="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400">
+                      <a href={`/blog/${next.id}/`}>{next.data.title}</a>
+                    </div>
+                  </div>
+                )}
+              </div>
+            )}
+          </div>
+          <div class="pt-4 xl:pt-8">
+            <a
+              href="/blog"
+              class="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
+            >
+              &larr; Back to the blog
+            </a>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </article>
+</BaseLayout>

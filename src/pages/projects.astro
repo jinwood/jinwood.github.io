@@ -1,0 +1,32 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import Card from '../components/Card.astro'
+import { getCollection } from 'astro:content'
+import { siteConfig } from '../siteConfig'
+
+const projects = (await getCollection('projects')).sort((a, b) =>
+  a.data.title.localeCompare(b.data.title)
+)
+---
+
+<BaseLayout title={`Projects - ${siteConfig.author}`} description={siteConfig.description}>
+  <div class="divide-y divide-gray-200 dark:divide-gray-700">
+    <div class="space-y-2 pb-8 pt-6 md:space-y-5">
+      <h1 class="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+        Projects
+      </h1>
+      <p class="text-lg leading-7 text-gray-500 dark:text-gray-400">
+        A few things I've worked on.
+      </p>
+    </div>
+    <div class="container py-12">
+      <div class="-m-4 flex flex-wrap">
+        {projects.map((project) => (
+          <div class="w-full p-4 md:w-1/2">
+            <Card project={project} />
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</BaseLayout>

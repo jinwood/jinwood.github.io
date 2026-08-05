@@ -1,0 +1,67 @@
+---
+import { headerNavLinks } from '../siteConfig'
+import ThemeToggle from './ThemeToggle.astro'
+
+const { pathname } = Astro.url
+const isActive = (href: string) =>
+  href === '/blog' && pathname.startsWith('/blog')
+    ? true
+    : href !== '/blog' && pathname.startsWith(href)
+---
+
+<header class="flex items-center justify-between py-10">
+  <div>
+    <a href="/" class="flex items-center text-2xl font-extrabold" aria-label="Home">
+      jinwood<span class="text-primary-500">.github.io</span>
+    </a>
+  </div>
+  <div class="flex items-center text-base leading-5">
+    <div class="hidden sm:block">
+      {headerNavLinks.map((link) => (
+        <a
+         
+          href={link.href}
+          class={`p-1 font-medium text-gray-900 dark:text-gray-100 sm:p-4 ${
+            isActive(link.href) ? 'text-primary-500 dark:text-primary-400' : ''
+          }`}
+        >
+          {link.title}
+        </a>
+      ))}
+    </div>
+    <ThemeToggle />
+    <button
+      type="button"
+      aria-label="Open menu"
+      class="ml-1 mr-1 h-8 w-8 rounded p-1 sm:hidden"
+      data-mobile-menu-button
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="text-gray-900 dark:text-gray-100">
+        <path
+          fill-rule="evenodd"
+          d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+          clip-rule="evenodd"
+        />
+      </svg>
+    </button>
+  </div>
+</header>
+
+<div class="mb-4 sm:hidden" data-mobile-menu>
+  <ul class="space-y-2 rounded-md bg-gray-100 p-4 dark:bg-gray-800">
+    {headerNavLinks.map((link) => (
+      <li>
+        <a href={link.href} class="block font-medium text-gray-900 dark:text-gray-100">
+          {link.title}
+        </a>
+      </li>
+    ))}
+  </ul>
+</div>
+
+<script>
+  const button = document.querySelector('[data-mobile-menu-button]')
+  const menu = document.querySelector('[data-mobile-menu]')
+  menu?.classList.add('hidden')
+  button?.addEventListener('click', () => menu?.classList.toggle('hidden'))
+</script>

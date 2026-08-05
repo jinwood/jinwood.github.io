@@ -1,0 +1,30 @@
+---
+import { siteConfig } from '../siteConfig'
+---
+
+<footer>
+  <div class="mb-8 mt-16 flex flex-col items-center">
+    <div class="mb-3 flex space-x-4">
+      <a class="text-sm text-gray-500 hover:text-primary-500" href={siteConfig.github} aria-label="GitHub">
+        GitHub
+      </a>
+      <a class="text-sm text-gray-500 hover:text-primary-500" href={siteConfig.linkedin} aria-label="LinkedIn">
+        LinkedIn
+      </a>
+      <a class="text-sm text-gray-500 hover:text-primary-500" href={`mailto:${siteConfig.email}`} aria-label="Email">
+        Email
+      </a>
+      <a class="text-sm text-gray-500 hover:text-primary-500" href="/feed.xml" aria-label="RSS">
+        RSS
+      </a>
+    </div>
+    <div class="mb-2 text-sm text-gray-500">
+      © {new Date().getFullYear()} {siteConfig.author}
+    </div>
+    <div class="text-sm text-gray-500">
+      <a href={siteConfig.siteRepo} class="hover:text-primary-500">
+        Source
+      </a>
+    </div>
+  </div>
+</footer>

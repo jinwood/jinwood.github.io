@@ -1,0 +1,48 @@
+---
+import type { CollectionEntry } from 'astro:content'
+
+type Project = CollectionEntry<'projects'>
+
+interface Props {
+  project: Project
+}
+
+const { project } = Astro.props
+const { title, description, imgSrc, href, images } = project.data
+const link = href ?? `/projects/${project.id}`
+const hasGallery = images.length > 0
+---
+
+<article class="overflow-hidden rounded-md border border-gray-200 shadow-md shadow-gray-200 dark:border-gray-700 dark:shadow-gray-700">
+  {imgSrc && (
+    <a href={link} aria-label={title}>
+      <img src={imgSrc} alt={title} loading="lazy" class="w-full object-cover" />
+    </a>
+  )}
+  <div class="p-6">
+    <h2 class="mb-3 text-2xl font-bold leading-8 tracking-tight">
+      <a href={link} class="text-gray-900 dark:text-gray-100">
+        {title}
+      </a>
+    </h2>
+    <p class="prose max-w-none text-gray-500 dark:text-gray-400">{description}</p>
+    <div class="mt-4">
+      {hasGallery && (
+        <a href={`/projects/${project.id}`} class="text-primary-500 hover:text-primary-600">
+          View gallery
+        </a>
+      )}
+      {hasGallery && href && ' · '}
+      {href && (
+        <a
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-primary-500 hover:text-primary-600"
+        >
+          Visit site
+        </a>
+      )}
+    </div>
+  </div>
+</article>

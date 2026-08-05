@@ -1,0 +1,50 @@
+---
+import '@fontsource-variable/inter'
+import '../styles/global.css'
+import SEO from '../components/SEO.astro'
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+
+interface Props {
+  title?: string
+  description?: string
+  type?: 'website' | 'article'
+  image?: string
+  canonicalUrl?: string
+  structuredData?: Record<string, unknown>
+}
+
+const { title, description, type, image, canonicalUrl, structuredData } = Astro.props
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <SEO
+      title={title}
+      description={description}
+      type={type}
+      image={image}
+      canonicalUrl={canonicalUrl}
+      structuredData={structuredData}
+    />
+    <script is:inline>
+      const stored = localStorage.getItem('theme')
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+      if (stored === 'dark' || (!stored && prefersDark)) {
+        document.documentElement.classList.add('dark')
+      }
+    </script>
+  </head>
+  <body class="bg-white text-black antialiased dark:bg-gray-900 dark:text-white">
+    <div class="mx-auto max-w-3xl px-4 sm:px-6 xl:max-w-5xl">
+      <div class="flex flex-col justify-between">
+        <Header />
+        <main class="mb-auto">
+          <slot />
+        </main>
+        <Footer />
+      </div>
+    </div>
+  </body>
+</html>

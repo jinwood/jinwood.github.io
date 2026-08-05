@@ -1,0 +1,57 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import { getCollection } from 'astro:content'
+import { siteConfig } from '../../siteConfig'
+
+export async function getStaticPaths() {
+  const projects = await getCollection('projects')
+  return projects.map((project) => ({ params: { slug: project.id }, props: { project } }))
+}
+
+const { project } = Astro.props
+const { title, description, images, href, imgSrc } = project.data
+const pageTitle = `${title} - ${siteConfig.author}`
+---
+
+<BaseLayout title={pageTitle} description={description} image={imgSrc}>
+  <article class="divide-y divide-gray-200 dark:divide-gray-700">
+    <header class="space-y-2 pb-8 pt-6 md:space-y-5">
+      <h1 class="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+        {title}
+      </h1>
+      <p class="text-lg leading-7 text-gray-500 dark:text-gray-400">{description}</p>
+      {href && (
+        <p>
+          <a
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
+          >
+            Visit site &rarr;
+          </a>
+        </p>
+      )}
+    </header>
+    {images.length > 0 && (
+      <div class="space-y-8 py-8">
+        {images.map((image) => (
+          <figure>
+            <img src={image.url} alt={image.alt} loading="lazy" class="w-full" />
+            <figcaption class="mt-2 text-center text-sm text-gray-500 dark:text-gray-400">
+              {image.alt}
+            </figcaption>
+          </figure>
+        ))}
+      </div>
+    )}
+    <div class="py-8">
+      <a
+        href="/projects"
+        class="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
+      >
+        &larr; Back to projects
+      </a>
+    </div>
+  </article>
+</BaseLayout>

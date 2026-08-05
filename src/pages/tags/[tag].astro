@@ -1,0 +1,27 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import ListLayout from '../../layouts/ListLayout.astro'
+import { getCollection } from 'astro:content'
+import { getSortedPosts } from '../../utils/getSortedPosts'
+import { kebabCase } from '../../utils/kebabCase'
+import { siteConfig } from '../../siteConfig'
+
+export async function getStaticPaths() {
+  const posts = getSortedPosts(await getCollection('blog'))
+  const tags = [...new Set(posts.flatMap((post) => post.data.tags))]
+  return tags.map((tag) => {
+    const filtered = posts.filter((post) => post.data.tags.some((t) => kebabCase(t) === kebabCase(tag)))
+    return { params: { tag: kebabCase(tag) }, props: { tag: kebabCase(tag), filtered } }
+  })
+}
+
+const { tag, filtered } = Astro.props
+const title = tag
+  .split('-')
+  .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+  .join(' ')
+---
+
+<BaseLayout title={`${tag} - ${siteConfig.author}`} description={`${tag} tags - ${siteConfig.author}`}>
+  <ListLayout title={title} posts={filtered} />
+</BaseLayout>
