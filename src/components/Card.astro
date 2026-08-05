@@ -16,7 +16,7 @@ const hasGallery = images.length > 0
 <article class="overflow-hidden rounded-md border border-gray-200 shadow-md shadow-gray-200 dark:border-gray-700 dark:shadow-gray-700">
   {imgSrc && (
     <a href={link} aria-label={title}>
-      <img src={imgSrc} alt={title} loading="lazy" class="w-full object-cover" />
+      <img src={imgSrc} alt={title} loading="lazy" class="aspect-video w-full object-cover" />
     </a>
   )}
   <div class="p-6">

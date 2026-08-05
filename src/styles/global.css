@@ -66,9 +66,25 @@ html {
   --tw-prose-code-bg: var(--color-gray-100);
 }
 
-.prose :where(code):not(:where([class~='not-prose'] *)) {
+.prose :where(code):not(:where([class~='not-prose'] *)):not(:where(pre *)) {
   border-radius: 0.25rem;
   padding: 2px 4px;
+  background-color: var(--tw-prose-code-bg);
+}
+
+.prose :where(code):not(:where([class~='not-prose'] *)):not(:where(pre *))::before,
+.prose :where(code):not(:where([class~='not-prose'] *)):not(:where(pre *))::after {
+  content: none;
+}
+
+.prose :where(h1, h2, h3, h4, h5, h6) a {
+  color: inherit;
+  font-weight: inherit;
+  text-decoration: none;
+}
+
+.prose :where(h1, h2, h3, h4, h5, h6) a:hover {
+  color: var(--color-primary-500);
 }
 
 .dark .prose {
@@ -86,6 +102,19 @@ html {
   --tw-prose-code-bg: var(--color-gray-800);
 }
 
-.dark .prose pre {
-  background-color: var(--color-gray-800);
+/* Shiki dual themes: inline styles always render the light theme,
+   so switch to the dark palette when the .dark class is active */
+.dark .astro-code-themes,
+.dark .astro-code-themes span {
+  color: var(--shiki-dark) !important;
+  background-color: var(--shiki-dark-bg) !important;
+}
+
+/* github-light blocks are white-on-white; give them definition */
+.prose .astro-code-themes {
+  border: 1px solid var(--color-gray-200);
+}
+
+.dark .prose .astro-code-themes {
+  border-color: var(--color-gray-700);
 }
