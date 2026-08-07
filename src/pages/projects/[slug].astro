@@ -2,56 +2,39 @@
 import BaseLayout from '../../layouts/BaseLayout.astro'
 import { getCollection } from 'astro:content'
 import { siteConfig } from '../../siteConfig'
-
-export async function getStaticPaths() {
-  const projects = await getCollection('projects')
-  return projects.map((project) => ({ params: { slug: project.id }, props: { project } }))
-}
-
+export async function getStaticPaths() { const projects = await getCollection('projects'); return projects.map(project => ({ params: { slug: project.id }, props: { project } })) }
 const { project } = Astro.props
 const { title, description, images, href, imgSrc } = project.data
-const pageTitle = `${title} - ${siteConfig.author}`
 ---
-
-<BaseLayout title={pageTitle} description={description} image={imgSrc}>
-  <article class="divide-y divide-gray-200 dark:divide-gray-700">
-    <header class="space-y-2 pb-8 pt-6 md:space-y-5">
-      <h1 class="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-        {title}
-      </h1>
-      <p class="text-lg leading-7 text-gray-500 dark:text-gray-400">{description}</p>
-      {href && (
-        <p>
-          <a
-            href={href}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
-          >
-            Visit site &rarr;
-          </a>
-        </p>
-      )}
-    </header>
-    {images.length > 0 && (
-      <div class="space-y-8 py-8">
-        {images.map((image) => (
-          <figure>
-            <img src={image.url} alt={image.alt} loading="lazy" class="w-full" />
-            <figcaption class="mt-2 text-center text-sm text-gray-500 dark:text-gray-400">
-              {image.alt}
+<BaseLayout title={`${title} - ${siteConfig.author}`} description={description} image={imgSrc}>
+  <article><header class="border-b rule py-12 lg:py-20"><p class="eyebrow">Project</p><h1 class="display mt-5 max-w-5xl text-[clamp(4rem,10vw,9rem)]">{title}</h1><div class="mt-8 grid gap-6 lg:grid-cols-[1fr_2fr]"><p class="eyebrow">About</p><div><p class="max-w-3xl text-lg leading-8 text-[var(--muted)]">{description}</p>{href && <a href={href} target="_blank" rel="noreferrer" class="arrow-link mt-6 text-sm">Visit site</a>}</div></div></header>
+  {images.length ? (
+    <div class="space-y-8 py-12 lg:py-16">
+      {images.map((image, i) => {
+        const isPortrait = image.url.includes('mobile')
+        return (
+          <figure class={`panel mx-auto overflow-hidden p-3 ${isPortrait ? 'max-w-sm' : 'max-w-6xl'}`}>
+            <div class={`grid place-items-center rounded-md bg-[var(--paper-deep)] ${isPortrait ? 'p-3' : 'p-2 sm:p-4'}`}>
+              <img
+                src={image.url}
+                alt={image.alt}
+                loading={i === 0 ? 'eager' : 'lazy'}
+                class={`rounded-sm object-contain ${isPortrait ? 'max-h-[46rem] w-auto' : 'max-h-[44rem] w-full'}`}
+              />
+            </div>
+            <figcaption class="px-1 pb-1 pt-3 text-xs font-bold uppercase tracking-[.1em] text-[var(--muted)]">
+              {String(i + 1).padStart(2, '0')} / {image.alt}
             </figcaption>
           </figure>
-        ))}
-      </div>
-    )}
-    <div class="py-8">
-      <a
-        href="/projects/"
-        class="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
-      >
-        &larr; Back to projects
-      </a>
+        )
+      })}
     </div>
-  </article>
+  ) : imgSrc && (
+    <div class="mx-auto max-w-6xl py-12">
+      <div class="panel grid max-h-[44rem] place-items-center bg-[var(--paper-deep)] p-4">
+        <img src={imgSrc} alt={title} class="max-h-[41rem] max-w-full object-contain" />
+      </div>
+    </div>
+  )}
+  <a href="/projects/" class="arrow-link text-sm">Back to projects</a></article>
 </BaseLayout>

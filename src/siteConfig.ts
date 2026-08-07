@@ -1,8 +1,8 @@
 export const siteConfig = {
-  title: 'jinwood.github.io',
+  title: 'Julian Inwood — Software Engineer',
   author: 'Julian Inwood',
-  headerTitle: 'jinwood.github.io',
-  description: 'My personal site',
+  headerTitle: 'Julian Inwood',
+  description: 'Software engineer and occasional writer based in Bristol, UK.',
   language: 'en-gb',
   siteUrl: 'https://jinwood.github.io',
   siteRepo: 'https://github.com/jinwood/jinwood.github.io',

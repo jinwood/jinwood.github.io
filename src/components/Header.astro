@@ -1,68 +1,25 @@
 ---
 import { headerNavLinks } from '../siteConfig'
 import ThemeToggle from './ThemeToggle.astro'
-
 const { pathname } = Astro.url
-const isActive = (href: string) =>
-  href === '/blog' && pathname.startsWith('/blog')
-    ? true
-    : href !== '/blog' && pathname.startsWith(href)
+const isActive = (href: string) => pathname.startsWith(href)
 ---
-
-<header class="flex items-center justify-between py-10">
-  <div>
-    <a href="/" class="flex items-center text-2xl font-extrabold" aria-label="Home">
-      jinwood<span class="text-primary-500">.github.io</span>
-    </a>
-  </div>
-  <div class="flex items-center text-base leading-5">
-    <div class="hidden sm:block">
-      {headerNavLinks.map((link) => (
-        <a
-          href={link.href}
-          class={`p-1 font-medium sm:p-4 ${
-            isActive(link.href)
-              ? 'text-primary-500 dark:text-primary-400'
-              : 'text-gray-900 hover:text-primary-500 dark:text-gray-100 dark:hover:text-primary-400'
-          }`}
-        >
-          {link.title}
-        </a>
-      ))}
+<header class="border-b rule py-6">
+  <div class="flex items-center justify-between gap-6">
+    <a href="/" class="text-sm font-bold tracking-tight" aria-label="Julian Inwood, home">Julian Inwood</a>
+    <div class="flex items-center gap-1">
+      <nav class="hidden items-center md:flex" aria-label="Main navigation">
+        {headerNavLinks.map((link) => <a href={link.href} aria-current={isActive(link.href) ? 'page' : undefined} class={`px-3 py-2 text-sm transition-colors ${isActive(link.href) ? 'font-semibold text-[var(--ink)]' : 'text-[var(--muted)] hover:text-[var(--ink)]'}`}>{link.title}</a>)}
+      </nav>
+      <ThemeToggle />
+      <button type="button" aria-label="Open menu" aria-expanded="false" class="grid h-9 w-9 place-items-center md:hidden" data-mobile-menu-button><span class="text-xl leading-none">≡</span></button>
     </div>
-    <ThemeToggle />
-    <button
-      type="button"
-      aria-label="Open menu"
-      class="ml-1 mr-1 h-8 w-8 rounded p-1 sm:hidden"
-      data-mobile-menu-button
-    >
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="text-gray-900 dark:text-gray-100">
-        <path
-          fill-rule="evenodd"
-          d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-          clip-rule="evenodd"
-        />
-      </svg>
-    </button>
   </div>
+  <nav class="mt-5 hidden grid-cols-2 gap-x-6 gap-y-3 border-t rule pt-5 md:hidden" data-mobile-menu aria-label="Mobile navigation">
+    {headerNavLinks.map((link) => <a href={link.href} class="text-sm text-[var(--muted)]">{link.title}</a>)}
+  </nav>
 </header>
-
-<div class="mb-4 sm:hidden" data-mobile-menu>
-  <ul class="space-y-2 rounded-md bg-gray-100 p-4 dark:bg-gray-800">
-    {headerNavLinks.map((link) => (
-      <li>
-        <a href={link.href} class="block font-medium text-gray-900 dark:text-gray-100">
-          {link.title}
-        </a>
-      </li>
-    ))}
-  </ul>
-</div>
-
 <script>
-  const button = document.querySelector('[data-mobile-menu-button]')
-  const menu = document.querySelector('[data-mobile-menu]')
-  menu?.classList.add('hidden')
-  button?.addEventListener('click', () => menu?.classList.toggle('hidden'))
+  const button = document.querySelector('[data-mobile-menu-button]'); const menu = document.querySelector('[data-mobile-menu]');
+  button?.addEventListener('click', () => { menu?.classList.toggle('hidden'); menu?.classList.toggle('grid'); button.setAttribute('aria-expanded', String(button.getAttribute('aria-expanded') !== 'true')); });
 </script>

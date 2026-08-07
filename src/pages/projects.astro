@@ -3,30 +3,9 @@ import BaseLayout from '../layouts/BaseLayout.astro'
 import Card from '../components/Card.astro'
 import { getCollection } from 'astro:content'
 import { siteConfig } from '../siteConfig'
-
-const projects = (await getCollection('projects')).sort((a, b) =>
-  a.data.title.localeCompare(b.data.title)
-)
+const projects = (await getCollection('projects')).sort((a,b) => Number(b.data.featured)-Number(a.data.featured))
 ---
-
-<BaseLayout title={`Projects - ${siteConfig.author}`} description={siteConfig.description}>
-  <div class="divide-y divide-gray-200 dark:divide-gray-700">
-    <div class="space-y-2 pb-8 pt-6 md:space-y-5">
-      <h1 class="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-        Projects
-      </h1>
-      <p class="text-lg leading-7 text-gray-500 dark:text-gray-400">
-        A few things I've worked on.
-      </p>
-    </div>
-    <div class="container py-12">
-      <div class="-m-4 flex flex-wrap">
-        {projects.map((project) => (
-          <div class="w-full p-4 md:w-1/2">
-            <Card project={project} />
-          </div>
-        ))}
-      </div>
-    </div>
-  </div>
+<BaseLayout title={`Projects - ${siteConfig.author}`} description="Selected product and engineering work by Julian Inwood.">
+  <header class="grid gap-8 border-b rule py-12 lg:grid-cols-[1fr_25rem] lg:items-end lg:py-20"><div><p class="eyebrow">Work</p><h1 class="display mt-4 text-[clamp(5rem,12vw,10rem)]">Projects</h1></div><p class="text-lg leading-8 text-[var(--muted)]">A few things I’ve worked on over the years.</p></header>
+  <div class="grid gap-6 py-12 md:grid-cols-2 lg:py-16">{projects.map((project) => <Card project={project} />)}</div>
 </BaseLayout>

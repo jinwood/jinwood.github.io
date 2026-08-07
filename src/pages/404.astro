@@ -1,27 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro'
 ---
-
-<BaseLayout title="Page not found" description="Page not found">
-  <div class="mt-24 flex flex-col items-start justify-start md:mt-24 md:flex-row md:items-center md:justify-center md:space-x-6">
-    <div class="space-x-2 border-gray-200 pb-8 pt-6 dark:border-gray-700 md:space-y-5">
-      <h1 class="text-6xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 md:border-r-2 md:px-6 md:text-8xl md:leading-14">
-        404
-      </h1>
-    </div>
-    <div class="max-w-md">
-      <p class="mb-4 text-xl font-bold leading-normal text-gray-900 dark:text-gray-100">
-        Sorry we couldn't find this page.
-      </p>
-      <p class="mb-8 text-gray-500 dark:text-gray-400">
-        But don't worry, you can find plenty of other things on the homepage.
-      </p>
-      <a
-        href="/"
-        class="rounded-md bg-primary-500 px-6 py-2 font-medium text-white hover:bg-primary-600 dark:hover:bg-primary-400"
-      >
-        Back to homepage
-      </a>
-    </div>
-  </div>
+<BaseLayout title="Page not found" description="This page could not be found.">
+  <section class="grid min-h-[60vh] place-items-center py-16 text-center"><div><p class="eyebrow">404</p><h1 class="display mt-5 text-[clamp(4rem,12vw,9rem)]">Page not found</h1><p class="mx-auto mt-6 max-w-md text-lg text-[var(--muted)]">Sorry, I couldn’t find the page you were looking for.</p><a href="/" class="arrow-link mt-8">Back to the homepage</a></div></section>
 </BaseLayout>

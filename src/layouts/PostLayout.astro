@@ -4,121 +4,24 @@ import Tag from '../components/Tag.astro'
 import { formatDate } from '../utils/formatDate'
 import { siteConfig } from '../siteConfig'
 import type { CollectionEntry } from 'astro:content'
-
-interface Props {
-  post: CollectionEntry<'blog'>
-  prev?: CollectionEntry<'blog'> | null
-  next?: CollectionEntry<'blog'> | null
-}
-
+interface Props { post: CollectionEntry<'blog'>; prev?: CollectionEntry<'blog'> | null; next?: CollectionEntry<'blog'> | null }
 const { post, prev, next } = Astro.props
 const { title, date, summary, tags, images } = post.data
-
-const editUrl = `${siteConfig.siteRepo}/blob/master/src/content/blog/${post.id}.md`
 const pageUrl = `${siteConfig.siteUrl}/blog/${post.id}/`
-
-const structuredData = {
-  '@context': 'https://schema.org',
-  '@type': 'Article',
-  mainEntityOfPage: { '@type': 'WebPage', '@id': pageUrl },
-  headline: title,
-  image: images.length > 0 ? images : [siteConfig.socialBanner],
-  datePublished: date?.toISOString(),
-  author: { '@type': 'Person', name: siteConfig.author },
-  publisher: {
-    '@type': 'Organization',
-    name: siteConfig.author,
-    logo: { '@type': 'ImageObject', url: siteConfig.siteUrl + siteConfig.siteLogo },
-  },
-  description: summary,
-}
+const structuredData = { '@context': 'https://schema.org', '@type': 'Article', headline: title, image: images.length ? images : [siteConfig.socialBanner], datePublished: date?.toISOString(), author: { '@type': 'Person', name: siteConfig.author }, description: summary }
 ---
-
-<BaseLayout
-  title={title}
-  description={summary}
-  type="article"
-  image={images[0] ?? siteConfig.socialBanner}
-  canonicalUrl={pageUrl}
-  structuredData={structuredData}
->
+<BaseLayout title={title} description={summary} type="article" image={images[0] ?? siteConfig.socialBanner} canonicalUrl={pageUrl} structuredData={structuredData}>
   <article>
-    <div class="xl:divide-y xl:divide-gray-200 xl:dark:divide-gray-700">
-      <header class="pt-6 xl:pb-6">
-        <div class="space-y-1 text-center">
-          <dl class="space-y-10">
-            <div>
-              <dt class="sr-only">Published on</dt>
-              <dd class="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
-                <time datetime={date?.toISOString()}>{date && formatDate(date)}</time>
-              </dd>
-            </div>
-          </dl>
-          <div>
-            <h1 class="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl md:leading-13">
-              {title}
-            </h1>
-          </div>
-        </div>
-      </header>
-      <div class="divide-y divide-gray-200 pb-8 dark:divide-gray-700 xl:grid xl:grid-cols-4 xl:gap-x-6 xl:divide-y-0">
-        <div class="prose max-w-none pb-8 pt-10 dark:prose-invert xl:col-span-4">
-          <slot />
-        </div>
-        <div class="pb-6 pt-6 text-sm text-gray-700 dark:text-gray-300 xl:col-span-4">
-          <a href={editUrl} class="hover:text-primary-500">
-            View on GitHub
-          </a>
-        </div>
-        <footer class="xl:col-span-4">
-          <div class="divide-gray-200 text-sm font-medium leading-5 dark:divide-gray-700 xl:divide-y">
-            {tags && tags.length > 0 && (
-              <div class="py-4 xl:py-8">
-                <h2 class="text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400">
-                  Tags
-                </h2>
-                <div class="flex flex-wrap">
-                  {tags.map((tag) => (
-                    <Tag text={tag} />
-                  ))}
-                </div>
-              </div>
-            )}
-            {(next || prev) && (
-              <div class="flex justify-between py-4 xl:block xl:space-y-8 xl:py-8">
-                {prev && (
-                  <div>
-                    <h2 class="text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400">
-                      Previous Article
-                    </h2>
-                    <div class="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400">
-                      <a href={`/blog/${prev.id}/`}>{prev.data.title}</a>
-                    </div>
-                  </div>
-                )}
-                {next && (
-                  <div>
-                    <h2 class="text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400">
-                      Next Article
-                    </h2>
-                    <div class="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400">
-                      <a href={`/blog/${next.id}/`}>{next.data.title}</a>
-                    </div>
-                  </div>
-                )}
-              </div>
-            )}
-          </div>
-          <div class="pt-4 xl:pt-8">
-            <a
-              href="/blog/"
-              class="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
-            >
-              &larr; Back to the blog
-            </a>
-          </div>
-        </footer>
-      </div>
+    <header class="border-b rule py-12 text-center sm:py-20">
+      <div class="mx-auto max-w-5xl"><p class="eyebrow">Published {date && formatDate(date)}</p><h1 class="display mt-6 text-[clamp(3.5rem,8vw,7.5rem)]">{title}</h1><p class="mx-auto mt-7 max-w-2xl text-lg leading-8 text-[var(--muted)]">{summary}</p><div class="mt-7 flex flex-wrap justify-center gap-2">{tags.map((tag) => <Tag text={tag} />)}</div></div>
+    </header>
+    <div class="grid gap-10 py-12 lg:grid-cols-[12rem_minmax(0,46rem)] lg:justify-center lg:py-16">
+      <aside class="text-xs font-bold uppercase tracking-[.12em] text-[var(--muted)] lg:sticky lg:top-8 lg:h-fit"><p class="text-[var(--ink)]">By Julian Inwood</p><a class="mt-5 block text-[var(--accent)]" href={`${siteConfig.siteRepo}/blob/master/src/content/blog/${post.id}.md`}>View on GitHub ↗</a></aside>
+      <div class="prose max-w-none"><slot /></div>
     </div>
+    <footer class="border-t rule py-10">
+      <div class="grid gap-5 sm:grid-cols-2">{prev && <a class="panel p-6" href={`/blog/${prev.id}/`}><span class="eyebrow">Previous</span><span class="mt-3 block font-serif text-2xl">{prev.data.title}</span></a>}{next && <a class="panel p-6 sm:text-right" href={`/blog/${next.id}/`}><span class="eyebrow">Next</span><span class="mt-3 block font-serif text-2xl">{next.data.title}</span></a>}</div>
+      <a href="/blog/" class="arrow-link mt-8 text-sm">Back to the blog</a>
+    </footer>
   </article>
 </BaseLayout>

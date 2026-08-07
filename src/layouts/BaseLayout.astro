@@ -36,11 +36,11 @@ const { title, description, type, image, canonicalUrl, structuredData } = Astro.
       }
     </script>
   </head>
-  <body class="bg-white text-black antialiased dark:bg-gray-900 dark:text-white">
-    <div class="mx-auto max-w-3xl px-4 sm:px-6 xl:max-w-5xl">
+  <body class="antialiased">
+    <div class="site-shell">
       <div class="flex min-h-screen flex-col justify-between">
         <Header />
-        <main class="mb-auto">
+        <main class="page-main mb-auto">
           <slot />
         </main>
         <Footer />
